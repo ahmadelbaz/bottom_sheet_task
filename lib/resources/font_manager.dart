@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class FontConstants {
-  static const fontFamily = "ADD_YOUR_FONT_HERE";
+  static const fontFamily = "SF-Pro-Display";
 }
 
 class FontWeightManager {
