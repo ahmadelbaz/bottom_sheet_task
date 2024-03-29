@@ -1,8 +1,9 @@
-import 'package:bottom_sheet_task_ahmad_elbaz/resources/theme_manager_dark.dart';
+import 'package:bottom_sheet_task_ahmad_elbaz/providers/all_providers.dart';
 import 'package:bottom_sheet_task_ahmad_elbaz/screens/home_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-class MyApp extends StatefulWidget {
+class MyApp extends ConsumerWidget {
   const MyApp._internal();
 
   static const _instance = MyApp._internal();
@@ -10,15 +11,10 @@ class MyApp extends StatefulWidget {
   factory MyApp() => _instance;
 
   @override
-  State<MyApp> createState() => _MyAppState();
-}
-
-class _MyAppState extends State<MyApp> {
-  @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: getDarkApplicationTheme(), // TODO : Manage Themes
+      theme: ref.watch(themeStateProvider),
       home: const HomeScreen(),
     );
   }

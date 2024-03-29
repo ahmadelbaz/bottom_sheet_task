@@ -4,7 +4,7 @@ import 'package:bottom_sheet_task_ahmad_elbaz/resources/text_style_manager.dart'
 import 'package:bottom_sheet_task_ahmad_elbaz/resources/value_manager.dart';
 import 'package:flutter/material.dart';
 
-ThemeData getDarkApplicationTheme() {
+ThemeData getLightApplicationTheme() {
   return ThemeData(
     // Main Colors
 
