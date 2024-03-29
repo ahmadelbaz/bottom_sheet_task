@@ -1,3 +1,4 @@
+import 'package:bottom_sheet_task_ahmad_elbaz/resources/color_manager.dart';
 import 'package:bottom_sheet_task_ahmad_elbaz/resources/common_functions.dart';
 import 'package:bottom_sheet_task_ahmad_elbaz/resources/string_manager.dart';
 import 'package:bottom_sheet_task_ahmad_elbaz/resources/value_manager.dart';
@@ -18,9 +19,18 @@ class HomeScreen extends ConsumerWidget {
           const Spacer(),
           const CustomElevatedButton(text: AppStrings.openReservation),
           heightSpace(AppSizes.s20),
-          const CustomElevatedButton(text: AppStrings.showIosTicket),
+          const CustomElevatedButton(
+            text: AppStrings.showIosTicket,
+            backgorundColor: ColorManager.darkBackground,
+            textColor: ColorManager.darkPrimary,
+            borderColor: ColorManager.darkPrimary,
+          ),
           heightSpace(AppSizes.s20),
-          const CustomElevatedButton(text: AppStrings.showAndroidTicket),
+          const CustomElevatedButton(
+            text: AppStrings.showAndroidTicket,
+            backgorundColor: ColorManager.darkBackground,
+            textColor: ColorManager.darkPrimary,
+          ),
           heightSpace(AppSizes.s50),
         ],
       ),
