@@ -16,7 +16,7 @@ ThemeData getDarkApplicationTheme() {
     colorScheme: const ColorScheme(
       primary: ColorManager.lightPrimary, // Done
       surface: ColorManager.white, // Done
-      background: ColorManager.white,
+      background: ColorManager.darkBackground,
       brightness: Brightness.light, // Done
       error: ColorManager.red,
       onBackground: ColorManager.lightBackground, // Done
@@ -53,21 +53,19 @@ ThemeData getDarkApplicationTheme() {
       focusColor: ColorManager.darkPrimary,
       hoverColor: ColorManager.lightBackground,
       shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(AppSizes.s12),
+        borderRadius: BorderRadius.circular(0),
       ),
     ),
 
     // Elevated Button theme
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
-        backgroundColor: ColorManager.lightPrimary,
+        backgroundColor: ColorManager.darkPrimary,
         textStyle: getRegularTextStyle(
           fontSize: FontSize.s16,
           color: ColorManager.white,
         ),
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(AppSizes.s12),
-        ),
+        shape: const LinearBorder(),
       ),
     ),
     // Text theme
