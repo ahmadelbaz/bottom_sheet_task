@@ -48,26 +48,43 @@ ThemeData getDarkApplicationTheme() {
     ),
 
     // Button theme
-    buttonTheme: ButtonThemeData(
+    buttonTheme: const ButtonThemeData(
       buttonColor: ColorManager.lightPrimary,
       focusColor: ColorManager.darkPrimary,
       hoverColor: ColorManager.lightBackground,
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(0),
-      ),
     ),
 
     // Elevated Button theme
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
         backgroundColor: ColorManager.darkPrimary,
-        textStyle: getRegularTextStyle(
+        textStyle: getBoldTextStyle(
           fontSize: FontSize.s16,
           color: ColorManager.white,
         ),
         shape: const LinearBorder(),
       ),
     ),
+
+    // Text Button theme
+    textButtonTheme: TextButtonThemeData(
+      style: TextButton.styleFrom(
+        foregroundColor: ColorManager.darkPrimary,
+        textStyle: getBoldTextStyle(
+          fontSize: FontSize.s16,
+        ),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(20),
+          side: const BorderSide(
+              color: ColorManager.darkPrimary, width: AppSizes.s50),
+        ),
+      ),
+    ),
+    outlinedButtonTheme: OutlinedButtonThemeData(
+        style: ButtonStyle(
+            shape: MaterialStateProperty.all(const RoundedRectangleBorder(
+      side: BorderSide(color: ColorManager.darkPrimary, width: AppSizes.s50),
+    )))),
     // Text theme
     textTheme: TextTheme(
       bodyLarge: getSemiBoldTextStyle(
@@ -82,9 +99,10 @@ ThemeData getDarkApplicationTheme() {
         fontSize: FontSize.s14,
         color: ColorManager.darkGrey,
       ),
-      // titleLarge: getSemiBoldTextStyle(
-      //   fontSize: FontSize.s16,
-      // ),
+      titleLarge: getBoldTextStyle(
+        fontSize: FontSize.s18,
+        color: ColorManager.white,
+      ),
       titleMedium: getRegularTextStyle(
         fontSize: FontSize.s14,
         color: ColorManager.grey2,
@@ -93,9 +111,6 @@ ThemeData getDarkApplicationTheme() {
         fontSize: FontSize.s12,
         color: ColorManager.lightPrimary,
       ),
-      // displayLarge: getBoldTextStyle(
-      //   fontSize: FontSize.s22,
-      // ),
       displayMedium: getMediumTextStyle(
         fontSize: FontSize.s12,
         color: ColorManager.lightPrimary,
@@ -104,6 +119,14 @@ ThemeData getDarkApplicationTheme() {
         fontSize: FontSize.s11,
         color: ColorManager.grey2,
       ),
+    ),
+    // Switch theme
+    switchTheme: SwitchThemeData(
+      thumbColor: MaterialStateProperty.all<Color>(ColorManager.darkGreyLight),
+      trackColor: MaterialStateProperty.all<Color>(ColorManager.darkGrey),
+      trackOutlineColor:
+          MaterialStateProperty.all<Color>(ColorManager.darkGreyBorder),
+      trackOutlineWidth: MaterialStateProperty.all(1),
     ),
 
     // Input decoration theme

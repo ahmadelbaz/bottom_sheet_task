@@ -61,6 +61,7 @@ ThemeData getLightApplicationTheme() {
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
         backgroundColor: ColorManager.lightPrimary,
+        foregroundColor: ColorManager.darkPrimary,
         textStyle: getRegularTextStyle(
           fontSize: FontSize.s16,
           color: ColorManager.white,
@@ -69,6 +70,23 @@ ThemeData getLightApplicationTheme() {
           borderRadius: BorderRadius.circular(AppSizes.s12),
         ),
       ),
+    ),
+    // Text Button theme
+    textButtonTheme: TextButtonThemeData(
+      style: TextButton.styleFrom(
+        foregroundColor: ColorManager.lightPrimary,
+        textStyle: getBoldTextStyle(
+          fontSize: FontSize.s16,
+        ),
+      ),
+    ),
+    // Switch theme
+    switchTheme: SwitchThemeData(
+      thumbColor: MaterialStateProperty.all<Color>(ColorManager.lightBorder),
+      trackColor: MaterialStateProperty.all<Color>(ColorManager.lightGrey),
+      trackOutlineColor:
+          MaterialStateProperty.all<Color>(ColorManager.lightBorder),
+      trackOutlineWidth: MaterialStateProperty.all(1),
     ),
     // Text theme
     textTheme: TextTheme(
@@ -84,9 +102,9 @@ ThemeData getLightApplicationTheme() {
         fontSize: FontSize.s14,
         color: ColorManager.darkGrey,
       ),
-      // titleLarge: getSemiBoldTextStyle(
-      //   fontSize: FontSize.s16,
-      // ),
+      titleLarge: getBoldTextStyle(
+        fontSize: FontSize.s18,
+      ),
       titleMedium: getRegularTextStyle(
         fontSize: FontSize.s14,
         color: ColorManager.grey2,
