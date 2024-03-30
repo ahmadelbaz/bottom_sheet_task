@@ -15,6 +15,7 @@ class HomeScreen extends ConsumerWidget {
     return Scaffold(
       body: Column(
         children: [
+          heightSpace(AppSizes.s50),
           const ChangeThemeBar(),
           const Spacer(),
           const CustomElevatedButton(text: AppStrings.openReservation),

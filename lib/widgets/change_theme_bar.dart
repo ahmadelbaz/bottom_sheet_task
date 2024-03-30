@@ -12,7 +12,7 @@ class ChangeThemeBar extends ConsumerWidget {
     return Padding(
       padding: const EdgeInsets.all(AppSizes.s18),
       child: ListTile(
-        leading: const FlutterLogo(),
+        leading: const Image(image: AssetImage(AppAssets.themeIcon)),
         title: Text(
           AppStrings.theme,
           style: Theme.of(context).textTheme.titleLarge,

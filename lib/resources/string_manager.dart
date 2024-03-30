@@ -5,3 +5,7 @@ class AppStrings {
   static const String showAndroidTicket = 'Show Android Ticket';
   static const String theme = 'Theme';
 }
+
+class AppAssets {
+  static const themeIcon = 'assets/icons/theme.png';
+}
