@@ -25,7 +25,8 @@ class ReservationProvider extends AutoDisposeAsyncNotifier<List<Reservation>> {
   }
 }
 
-final asyncMessageProvider = AsyncNotifierProvider.autoDispose<
-    ReservationProvider, Map<bool, List<Reservation>>>(() {
+final asyncMessageProvider =
+    AsyncNotifierProvider.autoDispose<ReservationProvider, List<Reservation>>(
+        () {
   return ReservationProvider();
 });

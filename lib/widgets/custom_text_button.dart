@@ -1,9 +1,9 @@
-import 'package:bottom_sheet_task_ahmad_elbaz/APIs/get_reservations.dart';
 import 'package:bottom_sheet_task_ahmad_elbaz/providers/all_providers.dart';
 import 'package:bottom_sheet_task_ahmad_elbaz/resources/color_manager.dart';
 import 'package:bottom_sheet_task_ahmad_elbaz/resources/font_manager.dart';
 import 'package:bottom_sheet_task_ahmad_elbaz/resources/text_style_manager.dart';
 import 'package:bottom_sheet_task_ahmad_elbaz/resources/value_manager.dart';
+import 'package:bottom_sheet_task_ahmad_elbaz/widgets/custom_bottom_sheet.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -19,7 +19,12 @@ class CustomTextButton extends ConsumerWidget {
       height: AppSizes.s50,
       child: TextButton(
         onPressed: () async {
-          await fetchReservations();
+          // await fetchReservations();
+          showModalBottomSheet(
+              context: context,
+              builder: (BuildContext context) {
+                return const CustomBottomSheet();
+              });
         },
         style: TextButton.styleFrom(
           textStyle: getBoldTextStyle(
