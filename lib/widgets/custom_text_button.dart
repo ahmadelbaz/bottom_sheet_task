@@ -1,3 +1,4 @@
+import 'package:bottom_sheet_task_ahmad_elbaz/APIs/get_reservations.dart';
 import 'package:bottom_sheet_task_ahmad_elbaz/providers/all_providers.dart';
 import 'package:bottom_sheet_task_ahmad_elbaz/resources/color_manager.dart';
 import 'package:bottom_sheet_task_ahmad_elbaz/resources/font_manager.dart';
@@ -17,7 +18,9 @@ class CustomTextButton extends ConsumerWidget {
       width: MediaQuery.of(context).size.width * 0.7,
       height: AppSizes.s50,
       child: TextButton(
-        onPressed: () {},
+        onPressed: () async {
+          await fetchReservations();
+        },
         style: TextButton.styleFrom(
           textStyle: getBoldTextStyle(
             fontSize: FontSize.s16,
