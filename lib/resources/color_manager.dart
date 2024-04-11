@@ -5,6 +5,7 @@ class ColorManager {
   static const Color darkBackground = Color(0xFF171717);
   static const Color darkPrimary = Color(0xFFE0E6F3);
   static const Color darkGrey = Color(0xff35383E);
+  static const Color darkGrey2 = Color(0xff2D2D2D);
   static const Color darkGreyLight = Color(0xff575E69);
   static const Color darkGreyBorder = Color(0xff565F6D);
   static const Color sun = Color(0xffEBCB87);

@@ -25,6 +25,7 @@ ThemeData getDarkApplicationTheme() {
       onSecondary: Colors.white, // Done
       onSurface: ColorManager.lightGrey, // Done
       secondary: ColorManager.darkPrimary,
+      primaryContainer: ColorManager.darkGrey2,
     ),
 
     // Card view theme
