@@ -12,17 +12,19 @@ class TicketBottomSheet extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     return CustomBottomSheet(
-      child: Center(
-        child: Padding(
-          padding: const EdgeInsets.all(AppSizes.s25),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              const Text(AppStrings.tickets),
-              heightSpace(AppSizes.s12),
-              const Ticket(),
-            ],
+      child: Padding(
+        padding: const EdgeInsets.all(AppSizes.s25),
+        child: Center(
+          child: SingleChildScrollView(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const Text(AppStrings.tickets),
+                heightSpace(AppSizes.s12),
+                const Ticket(),
+              ],
+            ),
           ),
         ),
       ),
