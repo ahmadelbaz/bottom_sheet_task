@@ -122,9 +122,10 @@ ThemeData getDarkApplicationTheme() {
         fontSize: FontSize.s18,
         color: ColorManager.white,
       ),
+      // List tile subtitle
       bodySmall: getRegularTextStyle(
-        fontSize: FontSize.s14,
-        color: ColorManager.darkGrey,
+        fontSize: FontSize.s15,
+        color: ColorManager.grey4,
       ),
       titleLarge: getBoldTextStyle(
         fontSize: FontSize.s18,
