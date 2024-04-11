@@ -116,9 +116,10 @@ ThemeData getDarkApplicationTheme() {
         fontSize: FontSize.s18,
         color: ColorManager.lightPrimary,
       ),
-      bodyMedium: getSemiBoldTextStyle(
-        fontSize: FontSize.s16,
-        color: ColorManager.darkGrey,
+      // The tesxt inside column in the ticket bottom sheet
+      bodyMedium: getBoldTextStyle(
+        fontSize: FontSize.s18,
+        color: ColorManager.white,
       ),
       bodySmall: getRegularTextStyle(
         fontSize: FontSize.s14,
