@@ -8,6 +8,7 @@ ThemeData getDarkApplicationTheme() {
   return ThemeData(
     // Main Colors
     primaryColor: ColorManager.darkPrimary,
+    primarySwatch: Colors.teal,
     primaryColorLight: ColorManager.white,
     primaryColorDark: ColorManager.darkPrimary,
     disabledColor: ColorManager.grey1,
@@ -96,16 +97,18 @@ ThemeData getDarkApplicationTheme() {
 
     // Bottom Sheet Theme
     bottomSheetTheme: const BottomSheetThemeData(
-      backgroundColor: ColorManager.black,
+      backgroundColor: Colors.transparent,
       modalBarrierColor: ColorManager.darkBackground,
       // modalBackgroundColor: Colors.blue,
-      // shape: ContinuousRectangleBorder(
-      //   borderRadius: BorderRadius.all(
-      //     Radius.circular(50),
-      //   ),
-      // ),
+      shape: RoundedRectangleBorder(
+        // Adjust corner shape
+        borderRadius: BorderRadius.vertical(
+          top: Radius.circular(20.0),
+        ),
+      ),
       showDragHandle: true,
     ),
+
     // Progress Indicator Theme
     progressIndicatorTheme: const ProgressIndicatorThemeData(
       color: ColorManager.white,
@@ -131,9 +134,10 @@ ThemeData getDarkApplicationTheme() {
         fontSize: FontSize.s18,
         color: ColorManager.white,
       ),
+      // Ticket bootom part title
       titleMedium: getRegularTextStyle(
-        fontSize: FontSize.s14,
-        color: ColorManager.grey2,
+        fontSize: FontSize.s15,
+        color: ColorManager.white,
       ),
       titleSmall: getRegularTextStyle(
         fontSize: FontSize.s12,

@@ -1,5 +1,7 @@
 import 'package:bottom_sheet_task_ahmad_elbaz/providers/reservation_provider.dart';
 import 'package:bottom_sheet_task_ahmad_elbaz/resources/color_manager.dart';
+import 'package:bottom_sheet_task_ahmad_elbaz/resources/common_functions.dart';
+import 'package:bottom_sheet_task_ahmad_elbaz/resources/string_manager.dart';
 import 'package:bottom_sheet_task_ahmad_elbaz/resources/value_manager.dart';
 import 'package:bottom_sheet_task_ahmad_elbaz/widgets/ticket_painter.dart';
 import 'package:flutter/material.dart';
@@ -24,9 +26,11 @@ class Ticket extends ConsumerWidget {
             child: SizedBox(
               width: double.infinity,
               child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   ListTile(
                     leading: CircleAvatar(
+                      radius: 17,
                       backgroundImage: NetworkImage(
                         ticketData![0].ticketUserData!.avatar.toString(),
                       ),
@@ -38,6 +42,35 @@ class Ticket extends ConsumerWidget {
                       style: Theme.of(context).textTheme.bodySmall,
                     ),
                   ),
+                  const Spacer(),
+                  Row(
+                    children: [
+                      widthSpace(16),
+                      Text(
+                        AppStrings.ticketType,
+                        style: Theme.of(context).textTheme.titleMedium,
+                      ),
+                      Text(
+                        ticketData[0].ticketTypeName.toString(),
+                        style: Theme.of(context).textTheme.bodySmall,
+                      ),
+                    ],
+                  ),
+                  Row(
+                    children: [
+                      widthSpace(16),
+                      Text(
+                        AppStrings.seat,
+                        style: Theme.of(context).textTheme.titleMedium,
+                      ),
+                      Text(
+                        ticketData[0].seat.toString(),
+                        style: Theme.of(context).textTheme.bodySmall,
+                      ),
+                    ],
+                  ),
+                  heightSpace(AppSizes.s16),
+                  // const Text('Ticket Typooo:'),
                 ],
               ),
             ),

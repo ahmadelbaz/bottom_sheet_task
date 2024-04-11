@@ -5,6 +5,8 @@ class AppStrings {
   static const String showAndroidTicket = 'Show Android Ticket';
   static const String theme = 'Theme';
   static const String tickets = 'Tickets:';
+  static const String ticketType = 'Ticket Type: ';
+  static const String seat = 'Seat: ';
 }
 
 class AppAssets {
