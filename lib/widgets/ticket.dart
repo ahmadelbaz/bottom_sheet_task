@@ -30,7 +30,7 @@ class Ticket extends ConsumerWidget {
                 children: [
                   ListTile(
                     leading: CircleAvatar(
-                      radius: 17,
+                      radius: AppSizes.s17,
                       backgroundImage: NetworkImage(
                         ticketData![0].ticketUserData!.avatar.toString(),
                       ),
@@ -45,7 +45,7 @@ class Ticket extends ConsumerWidget {
                   const Spacer(),
                   Row(
                     children: [
-                      widthSpace(16),
+                      widthSpace(AppSizes.s16),
                       Text(
                         AppStrings.ticketType,
                         style: Theme.of(context).textTheme.titleMedium,
@@ -58,7 +58,7 @@ class Ticket extends ConsumerWidget {
                   ),
                   Row(
                     children: [
-                      widthSpace(16),
+                      widthSpace(AppSizes.s16),
                       Text(
                         AppStrings.seat,
                         style: Theme.of(context).textTheme.titleMedium,

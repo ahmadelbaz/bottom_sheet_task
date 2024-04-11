@@ -76,9 +76,11 @@ ThemeData getDarkApplicationTheme() {
           fontSize: FontSize.s16,
         ),
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(20),
+          borderRadius: BorderRadius.circular(AppSizes.s20),
           side: const BorderSide(
-              color: ColorManager.darkPrimary, width: AppSizes.s50),
+            color: ColorManager.darkPrimary,
+            width: AppSizes.s50,
+          ),
         ),
       ),
     ),
@@ -89,7 +91,9 @@ ThemeData getDarkApplicationTheme() {
         shape: MaterialStateProperty.all(
           const RoundedRectangleBorder(
             side: BorderSide(
-                color: ColorManager.darkPrimary, width: AppSizes.s50),
+              color: ColorManager.darkPrimary,
+              width: AppSizes.s50,
+            ),
           ),
         ),
       ),
@@ -103,7 +107,7 @@ ThemeData getDarkApplicationTheme() {
       shape: RoundedRectangleBorder(
         // Adjust corner shape
         borderRadius: BorderRadius.vertical(
-          top: Radius.circular(20.0),
+          top: Radius.circular(AppSizes.s20),
         ),
       ),
       showDragHandle: true,
@@ -158,7 +162,7 @@ ThemeData getDarkApplicationTheme() {
       trackColor: MaterialStateProperty.all<Color>(ColorManager.darkGrey),
       trackOutlineColor:
           MaterialStateProperty.all<Color>(ColorManager.darkGreyBorder),
-      trackOutlineWidth: MaterialStateProperty.all(1),
+      trackOutlineWidth: MaterialStateProperty.all(AppSizes.s1),
     ),
 
     // Input decoration theme
