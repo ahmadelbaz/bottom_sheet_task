@@ -3,7 +3,7 @@ import 'package:bottom_sheet_task_ahmad_elbaz/resources/color_manager.dart';
 import 'package:bottom_sheet_task_ahmad_elbaz/resources/font_manager.dart';
 import 'package:bottom_sheet_task_ahmad_elbaz/resources/text_style_manager.dart';
 import 'package:bottom_sheet_task_ahmad_elbaz/resources/value_manager.dart';
-import 'package:bottom_sheet_task_ahmad_elbaz/widgets/custom_bottom_sheet.dart';
+import 'package:bottom_sheet_task_ahmad_elbaz/widgets/ticket_bottom_sheet.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -19,12 +19,13 @@ class CustomTextButton extends ConsumerWidget {
       height: AppSizes.s50,
       child: TextButton(
         onPressed: () async {
-          // await fetchReservations();
           showModalBottomSheet(
-              context: context,
-              builder: (BuildContext context) {
-                return const CustomBottomSheet();
-              });
+            // isScrollControlled: true,
+            context: context,
+            builder: (BuildContext context) {
+              return const TicketBottomSheet();
+            },
+          );
         },
         style: TextButton.styleFrom(
           textStyle: getBoldTextStyle(

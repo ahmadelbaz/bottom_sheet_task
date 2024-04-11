@@ -80,11 +80,36 @@ ThemeData getDarkApplicationTheme() {
         ),
       ),
     ),
+
+    // Outline Button Theme
     outlinedButtonTheme: OutlinedButtonThemeData(
-        style: ButtonStyle(
-            shape: MaterialStateProperty.all(const RoundedRectangleBorder(
-      side: BorderSide(color: ColorManager.darkPrimary, width: AppSizes.s50),
-    )))),
+      style: ButtonStyle(
+        shape: MaterialStateProperty.all(
+          const RoundedRectangleBorder(
+            side: BorderSide(
+                color: ColorManager.darkPrimary, width: AppSizes.s50),
+          ),
+        ),
+      ),
+    ),
+
+    // Bottom Sheet Theme
+    bottomSheetTheme: const BottomSheetThemeData(
+      backgroundColor: ColorManager.black,
+      modalBarrierColor: ColorManager.darkBackground,
+      // modalBackgroundColor: Colors.blue,
+      // shape: ContinuousRectangleBorder(
+      //   borderRadius: BorderRadius.all(
+      //     Radius.circular(50),
+      //   ),
+      // ),
+      showDragHandle: true,
+    ),
+    // Progress Indicator Theme
+    progressIndicatorTheme: const ProgressIndicatorThemeData(
+      color: ColorManager.white,
+    ),
+
     // Text theme
     textTheme: TextTheme(
       bodyLarge: getSemiBoldTextStyle(
