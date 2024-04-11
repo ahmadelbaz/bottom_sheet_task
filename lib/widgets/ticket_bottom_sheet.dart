@@ -1,4 +1,3 @@
-import 'package:bottom_sheet_task_ahmad_elbaz/providers/reservation_provider.dart';
 import 'package:bottom_sheet_task_ahmad_elbaz/widgets/custom_bottom_sheet.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -8,8 +7,6 @@ class TicketBottomSheet extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final reservationProvider = ref.read(asyncMessageProvider.notifier).state;
-
     return CustomBottomSheet(
       child: Center(
         child: Container(),

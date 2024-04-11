@@ -20,7 +20,6 @@ class CustomTextButton extends ConsumerWidget {
       child: TextButton(
         onPressed: () async {
           showModalBottomSheet(
-            // isScrollControlled: true,
             context: context,
             builder: (BuildContext context) {
               return const TicketBottomSheet();
