@@ -1,3 +1,4 @@
+import 'package:bottom_sheet_task_ahmad_elbaz/providers/reservation_provider.dart';
 import 'package:bottom_sheet_task_ahmad_elbaz/resources/common_functions.dart';
 import 'package:bottom_sheet_task_ahmad_elbaz/resources/string_manager.dart';
 import 'package:bottom_sheet_task_ahmad_elbaz/resources/value_manager.dart';
@@ -11,6 +12,8 @@ class TicketBottomSheet extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final reservationProvider = ref.read(asyncMessageProvider);
+    final ticketData = reservationProvider.value![0].userTickets;
     return CustomBottomSheet(
       child: Padding(
         padding: const EdgeInsets.all(AppSizes.s25),
@@ -22,7 +25,9 @@ class TicketBottomSheet extends ConsumerWidget {
               children: [
                 const Text(AppStrings.tickets),
                 heightSpace(AppSizes.s12),
-                const Ticket(),
+                Ticket(
+                  userTicket: ticketData![0],
+                ),
               ],
             ),
           ),
