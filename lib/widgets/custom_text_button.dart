@@ -1,3 +1,4 @@
+import 'package:bottom_sheet/bottom_sheet.dart';
 import 'package:bottom_sheet_task_ahmad_elbaz/providers/all_providers.dart';
 import 'package:bottom_sheet_task_ahmad_elbaz/resources/color_manager.dart';
 import 'package:bottom_sheet_task_ahmad_elbaz/resources/font_manager.dart';
@@ -14,15 +15,26 @@ class CustomTextButton extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    // final scrollController = ScrollController();
     return SizedBox(
       width: MediaQuery.of(context).size.width * 0.7,
       height: AppSizes.s50,
       child: TextButton(
         onPressed: () async {
-          showModalBottomSheet(
+          showFlexibleBottomSheet(
+            minHeight: 0,
+            initHeight: 0.5,
+            maxHeight: 1,
+            anchors: [0, 0.5, 1],
+            bottomSheetBorderRadius:
+                const BorderRadius.vertical(top: Radius.circular(AppSizes.s20)),
+            barrierColor: Theme.of(context).bottomSheetTheme.modalBarrierColor,
             context: context,
-            builder: (BuildContext context) {
-              return const TicketBottomSheet();
+            builder: (BuildContext context, ScrollController scrollController,
+                double bottomSheetOffset) {
+              return TicketBottomSheet(
+                scrollController: scrollController,
+              );
             },
           );
         },

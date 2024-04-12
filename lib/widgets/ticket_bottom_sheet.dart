@@ -8,17 +8,20 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class TicketBottomSheet extends ConsumerWidget {
-  const TicketBottomSheet({super.key});
+  final ScrollController? scrollController;
+  const TicketBottomSheet({this.scrollController, super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final reservationProvider = ref.read(asyncMessageProvider);
     final ticketData = reservationProvider.value![0].userTickets;
     return CustomBottomSheet(
+      dragHandlerColor: Theme.of(context).bottomSheetTheme.dragHandleColor,
       child: Padding(
         padding: const EdgeInsets.all(AppSizes.s25),
         child: Center(
           child: SingleChildScrollView(
+            controller: scrollController,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.start,

@@ -101,9 +101,9 @@ ThemeData getDarkApplicationTheme() {
 
     // Bottom Sheet Theme
     bottomSheetTheme: const BottomSheetThemeData(
-      backgroundColor: Colors.transparent,
+      backgroundColor: ColorManager.darkBackground,
       modalBarrierColor: ColorManager.darkBackground,
-      // modalBackgroundColor: Colors.blue,
+      dragHandleColor: ColorManager.darkGrey3,
       shape: RoundedRectangleBorder(
         // Adjust corner shape
         borderRadius: BorderRadius.vertical(
