@@ -1,3 +1,4 @@
+import 'package:bottom_sheet/bottom_sheet.dart';
 import 'package:bottom_sheet_task_ahmad_elbaz/resources/font_manager.dart';
 import 'package:bottom_sheet_task_ahmad_elbaz/resources/text_style_manager.dart';
 import 'package:bottom_sheet_task_ahmad_elbaz/resources/value_manager.dart';
@@ -16,13 +17,29 @@ class CustomElevatedButton extends ConsumerWidget {
       height: AppSizes.s50,
       child: ElevatedButton(
         onPressed: () {
-          showModalBottomSheet(
-            isScrollControlled: true,
+          showFlexibleBottomSheet(
+            minHeight: 0,
+            initHeight: 0.8,
+            maxHeight: 1,
+            anchors: [0, 0.5, 0.8, 1],
+            bottomSheetBorderRadius:
+                const BorderRadius.vertical(top: Radius.circular(AppSizes.s20)),
+            barrierColor: Theme.of(context).bottomSheetTheme.modalBarrierColor,
             context: context,
-            builder: (BuildContext context) {
-              return const ReservationBottomSheet();
+            builder: (BuildContext context, ScrollController scrollController,
+                double bottomSheetOffset) {
+              return ReservationBottomSheet(
+                scrollController: scrollController,
+              );
             },
           );
+          // showModalBottomSheet(
+          //   isScrollControlled: true,
+          //   context: context,
+          //   builder: (BuildContext context) {
+          //     return const ReservationBottomSheet();
+          //   },
+          // );
         },
         style: ElevatedButton.styleFrom(
           textStyle: getBoldTextStyle(

@@ -104,6 +104,11 @@ ThemeData getDarkApplicationTheme() {
       backgroundColor: ColorManager.darkBackground,
       modalBarrierColor: ColorManager.darkBackground,
       dragHandleColor: ColorManager.darkGrey3,
+      // Color for darker dragHandler (Maybe change this concpet later)
+      surfaceTintColor: ColorManager.darkDraggerColor,
+      // Color of drag handler child (Maybe change this concpet later)
+      modalBackgroundColor: ColorManager.white,
+      // surfaceTintColor: Colors.blue,
       shape: RoundedRectangleBorder(
         // Adjust corner shape
         borderRadius: BorderRadius.vertical(
