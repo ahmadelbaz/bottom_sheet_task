@@ -1,3 +1,5 @@
+import 'package:bottom_sheet_task_ahmad_elbaz/providers/reservation_provider.dart';
+import 'package:bottom_sheet_task_ahmad_elbaz/resources/common_functions.dart';
 import 'package:bottom_sheet_task_ahmad_elbaz/resources/value_manager.dart';
 import 'package:bottom_sheet_task_ahmad_elbaz/widgets/custom_bottom_sheet.dart';
 import 'package:flutter/material.dart';
@@ -11,6 +13,7 @@ class ReservationBottomSheet extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final reservationProvider = ref.read(asyncMessageProvider);
     return CustomBottomSheet(
       scrollController: scrollController,
       bottomSheetOffset: bottomSheetOffset,
@@ -20,26 +23,10 @@ class ReservationBottomSheet extends ConsumerWidget {
           children: [
             Column(
               children: [
-                Container(
-                  color: Colors.white,
-                  height: 300,
-                  // width: double.infinity,
-                ),
-                Container(
-                  color: Colors.purple,
-                  height: 100,
-                  // width: double.infinity,
-                ),
-                Container(
-                  color: Colors.amber,
-                  height: 200,
-                  // width: double.infinity,
-                ),
-                Container(
-                  color: Colors.green,
-                  height: 100,
-                  // width: double.infinity,
-                ),
+                heightSpace(AppSizes.s30),
+                Image.network(reservationProvider
+                    .value![0].stays![0].stayImages![0]
+                    .toString()),
               ],
             ),
             Positioned(
