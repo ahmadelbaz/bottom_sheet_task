@@ -32,7 +32,6 @@ class CustomTextButton extends ConsumerWidget {
             context: context,
             builder: (BuildContext context, ScrollController scrollController,
                 double bottomSheetOffset) {
-              print('bottomSheetOffset $bottomSheetOffset');
               return TicketBottomSheet(
                 scrollController: scrollController,
                 bottomSheetOffset: bottomSheetOffset,

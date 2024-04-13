@@ -30,6 +30,7 @@ class CustomElevatedButton extends ConsumerWidget {
                 double bottomSheetOffset) {
               return ReservationBottomSheet(
                 scrollController: scrollController,
+                bottomSheetOffset: bottomSheetOffset,
               );
             },
           );

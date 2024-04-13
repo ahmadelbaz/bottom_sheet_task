@@ -20,22 +20,68 @@ class TicketBottomSheet extends ConsumerWidget {
     return CustomBottomSheet(
       scrollController: scrollController,
       bottomSheetOffset: bottomSheetOffset,
-      child: Center(
-        child: Padding(
-          padding: const EdgeInsets.all(AppSizes.s25),
-          child: SingleChildScrollView(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                const Text(AppStrings.tickets),
-                heightSpace(AppSizes.s12),
-                Ticket(
-                  userTicket: ticketData![0],
+      child: SingleChildScrollView(
+        controller: scrollController,
+        child: Stack(
+          children: [
+            SizedBox(
+              height: MediaQuery.of(context).size.height * bottomSheetOffset!,
+              child: Center(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.all(AppSizes.s25),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          const Text(AppStrings.tickets),
+                          heightSpace(AppSizes.s12),
+                          Ticket(
+                            userTicket: ticketData![0],
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
                 ),
-              ],
+              ),
             ),
-          ),
+            Positioned(
+              top: 0.0,
+              left: 0.0,
+              right: 0.0,
+              height: AppSizes.s30, // Adjust grab bar height as needed
+              child: NotificationListener<ScrollNotification>(
+                onNotification: (ScrollNotification notification) {
+                  if (notification is ScrollUpdateNotification) {
+                    scrollController?.jumpTo(notification.metrics.pixels);
+                  }
+                  return true;
+                },
+                child: Container(
+                  color: Theme.of(context)
+                      .bottomSheetTheme
+                      .dragHandleColor!
+                      .withOpacity(0.8),
+                  child: Center(
+                    child: Container(
+                      width: AppSizes.s50,
+                      height: AppSizes.s6,
+                      decoration: BoxDecoration(
+                        color: Theme.of(context)
+                            .bottomSheetTheme
+                            .modalBackgroundColor,
+                        borderRadius: const BorderRadius.all(
+                          Radius.circular(AppSizes.s10),
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          ],
         ),
       ),
     );
