@@ -137,7 +137,9 @@ class ReservationBottomSheet extends ConsumerWidget {
                             reservationProvider.value![0].userTickets![0],
                       ),
                       heightSpace(AppSizes.s45),
-                      const CustomDivider(),
+                      CustomDivider(
+                        color: Theme.of(context).dividerTheme.color!,
+                      ),
                       heightSpace(AppSizes.s45),
                     ],
                   ),
