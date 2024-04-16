@@ -1,5 +1,6 @@
 import 'package:bottom_sheet_task_ahmad_elbaz/providers/reservation_provider.dart';
 import 'package:bottom_sheet_task_ahmad_elbaz/resources/common_functions.dart';
+import 'package:bottom_sheet_task_ahmad_elbaz/resources/string_manager.dart';
 import 'package:bottom_sheet_task_ahmad_elbaz/resources/value_manager.dart';
 import 'package:bottom_sheet_task_ahmad_elbaz/widgets/custom_bottom_sheet.dart';
 import 'package:flutter/material.dart';
@@ -45,12 +46,10 @@ class ReservationBottomSheet extends ConsumerWidget {
                 heightSpace(AppSizes.s30),
                 Row(
                   children: [
-                    // const Expanded(child: ListTile()),
                     Expanded(
                       child: ListTile(
                         title: const Text(
                           "From",
-                          // style: Theme.of(context).textTheme.bodyMedium,
                         ),
                         subtitle: Text(
                           "${reservationProvider.value![0].startDate}",
@@ -62,10 +61,62 @@ class ReservationBottomSheet extends ConsumerWidget {
                       child: ListTile(
                         title: const Text(
                           "Till",
-                          // style: Theme.of(context).textTheme.bodyMedium,
                         ),
                         subtitle: Text(
                           "${reservationProvider.value![0].endDate}",
+                          style: Theme.of(context).textTheme.bodySmall,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+                heightSpace(AppSizes.s30),
+                Row(
+                  children: [
+                    Expanded(
+                      child: ListTile(
+                        title: const Text(
+                          "Stars",
+                        ),
+                        subtitle: SizedBox(
+                          height: 20,
+                          child: MediaQuery.removePadding(
+                            context: context,
+                            removeRight: true,
+                            removeLeft: true,
+                            removeTop: true,
+                            child: ListView.separated(
+                              separatorBuilder: (context, index) =>
+                                  const SizedBox(width: AppSizes.s3),
+                              scrollDirection: Axis.horizontal,
+                              itemCount: reservationProvider
+                                  .value![0].stays![0].stars!,
+                              itemBuilder: (item, index) {
+                                return MediaQuery.removePadding(
+                                  context: context,
+                                  removeRight: true,
+                                  removeLeft: true,
+                                  removeTop: true,
+                                  child: const Image(
+                                    image: AssetImage(AppAssets.starIcon),
+                                    // fit: BoxFit.contain,
+                                    width: AppSizes.s18,
+                                    height: AppSizes.s18,
+                                  ),
+                                );
+                              },
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                    Expanded(
+                      child: ListTile(
+                        title: const Text(
+                          "Room Count",
+                        ),
+                        subtitle: Text(
+                          "${reservationProvider.value![0].startDate}",
                           style: Theme.of(context).textTheme.bodySmall,
                         ),
                       ),
