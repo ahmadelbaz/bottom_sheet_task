@@ -3,6 +3,8 @@ import 'package:bottom_sheet_task_ahmad_elbaz/resources/common_functions.dart';
 import 'package:bottom_sheet_task_ahmad_elbaz/resources/string_manager.dart';
 import 'package:bottom_sheet_task_ahmad_elbaz/resources/value_manager.dart';
 import 'package:bottom_sheet_task_ahmad_elbaz/widgets/custom_bottom_sheet.dart';
+import 'package:bottom_sheet_task_ahmad_elbaz/widgets/location_container.dart';
+import 'package:bottom_sheet_task_ahmad_elbaz/widgets/ticket.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -33,90 +35,105 @@ class ReservationBottomSheet extends ConsumerWidget {
                   width: double.infinity,
                 ),
                 Padding(
-                  padding: const EdgeInsets.all(25),
+                  padding: const EdgeInsets.symmetric(horizontal: 25),
                   child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      heightSpace(AppSizes.s30),
-                      ListTile(
-                        contentPadding: EdgeInsets.zero,
-                        title: Text(
-                          "Hotel Check-in",
-                          style: Theme.of(context).textTheme.titleLarge,
-                        ),
-                        subtitle: Text(
-                          "${reservationProvider.value![0].stays![0].name} Hotel",
-                          style: Theme.of(context).textTheme.bodySmall,
-                        ),
+                      heightSpace(AppSizes.s40),
+                      Text(
+                        "Hotel Check-in",
+                        style: Theme.of(context).textTheme.titleLarge,
                       ),
-                      heightSpace(AppSizes.s30),
+                      Text(
+                        "${reservationProvider.value![0].stays![0].name} Hotel",
+                        style: Theme.of(context).textTheme.bodySmall,
+                      ),
+                      heightSpace(AppSizes.s40),
                       Row(
                         children: [
                           Expanded(
-                            child: ListTile(
-                              contentPadding: EdgeInsets.zero,
-                              title: const Text(
-                                "From",
-                              ),
-                              subtitle: Text(
-                                "${reservationProvider.value![0].startDate}",
-                                style: Theme.of(context).textTheme.bodySmall,
-                              ),
-                            ),
-                          ),
-                          Expanded(
-                            child: ListTile(
-                              contentPadding: EdgeInsets.zero,
-                              title: const Text(
-                                "Till",
-                              ),
-                              subtitle: Text(
-                                "${reservationProvider.value![0].endDate}",
-                                style: Theme.of(context).textTheme.bodySmall,
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                      heightSpace(AppSizes.s30),
-                      Row(
-                        children: [
-                          Expanded(
-                            child: ListTile(
-                              contentPadding: EdgeInsets.zero,
-                              title: const Text(
-                                "Stars",
-                              ),
-                              subtitle: SizedBox(
-                                height: 20,
-                                child: ListView.separated(
-                                  separatorBuilder: (context, index) =>
-                                      const SizedBox(width: AppSizes.s3),
-                                  scrollDirection: Axis.horizontal,
-                                  itemCount: reservationProvider
-                                      .value![0].stays![0].stars!,
-                                  itemBuilder: (item, index) {
-                                    return const Image(
-                                      image: AssetImage(AppAssets.starIcon),
-                                      // fit: BoxFit.contain,
-                                      width: AppSizes.s18,
-                                      height: AppSizes.s18,
-                                    );
-                                  },
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                const Text(
+                                  "From",
                                 ),
-                              ),
+                                Text(
+                                  "${reservationProvider.value![0].startDate}",
+                                  style: Theme.of(context).textTheme.bodySmall,
+                                ),
+                              ],
                             ),
                           ),
                           Expanded(
-                            child: ListTile(
-                              contentPadding: EdgeInsets.zero,
-                              title: const Text('Room Count'),
-                              subtitle: Text(
-                                "${reservationProvider.value![0].stays![0].rooms!.length}",
-                                style: Theme.of(context).textTheme.bodySmall,
-                              ),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                const Text(
+                                  "Till",
+                                ),
+                                Text(
+                                  "${reservationProvider.value![0].endDate}",
+                                  style: Theme.of(context).textTheme.bodySmall,
+                                ),
+                              ],
                             ),
                           ),
                         ],
+                      ),
+                      heightSpace(AppSizes.s40),
+                      Row(
+                        children: [
+                          Expanded(
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                const Text(
+                                  "Stars",
+                                ),
+                                SizedBox(
+                                  height: 20,
+                                  child: ListView.separated(
+                                    separatorBuilder: (context, index) =>
+                                        const SizedBox(width: AppSizes.s3),
+                                    scrollDirection: Axis.horizontal,
+                                    itemCount: reservationProvider
+                                        .value![0].stays![0].stars!,
+                                    itemBuilder: (item, index) {
+                                      return const Image(
+                                        image: AssetImage(AppAssets.starIcon),
+                                        width: AppSizes.s18,
+                                        height: AppSizes.s18,
+                                      );
+                                    },
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                          Expanded(
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                const Text('Room Count'),
+                                Text(
+                                  "${reservationProvider.value![0].stays![0].rooms!.length} Room",
+                                  style: Theme.of(context).textTheme.bodySmall,
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                      heightSpace(AppSizes.s40),
+                      const Text('Location:'),
+                      const LocationContainer(),
+                      heightSpace(AppSizes.s40),
+                      const Text('Tickets:'),
+                      heightSpace(AppSizes.s12),
+                      Ticket(
+                        userTicket:
+                            reservationProvider.value![0].userTickets![0],
                       ),
                     ],
                   ),
