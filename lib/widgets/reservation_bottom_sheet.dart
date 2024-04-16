@@ -24,9 +24,13 @@ class ReservationBottomSheet extends ConsumerWidget {
             Column(
               children: [
                 heightSpace(AppSizes.s30),
-                Image.network(reservationProvider
-                    .value![0].stays![0].stayImages![0]
-                    .toString()),
+                Image.network(
+                  reservationProvider.value![0].stays![0].stayImages![0]
+                      .toString(),
+                  alignment: Alignment.topCenter,
+                  width: double.infinity,
+                ),
+                heightSpace(AppSizes.s30),
               ],
             ),
             Positioned(

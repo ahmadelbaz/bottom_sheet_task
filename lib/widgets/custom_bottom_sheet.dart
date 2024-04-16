@@ -17,7 +17,9 @@ class CustomBottomSheet extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     return Container(
       decoration: const BoxDecoration(
-        borderRadius: BorderRadius.vertical(top: Radius.circular(AppSizes.s20)),
+        borderRadius: BorderRadius.vertical(
+          top: Radius.circular(AppSizes.s20),
+        ),
       ),
       child: child,
     );

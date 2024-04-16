@@ -27,23 +27,25 @@ class TicketBottomSheet extends ConsumerWidget {
             SizedBox(
               height: MediaQuery.of(context).size.height * bottomSheetOffset!,
               child: Center(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.all(AppSizes.s25),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          const Text(AppStrings.tickets),
-                          heightSpace(AppSizes.s12),
-                          Ticket(
-                            userTicket: ticketData![0],
-                          ),
-                        ],
+                child: SingleChildScrollView(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.all(AppSizes.s25),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            const Text(AppStrings.tickets),
+                            heightSpace(AppSizes.s12),
+                            Ticket(
+                              userTicket: ticketData![0],
+                            ),
+                          ],
+                        ),
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
               ),
             ),
