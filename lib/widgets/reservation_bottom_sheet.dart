@@ -22,6 +22,7 @@ class ReservationBottomSheet extends ConsumerWidget {
         child: Stack(
           children: [
             Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 heightSpace(AppSizes.s30),
                 Image.network(
@@ -31,6 +32,46 @@ class ReservationBottomSheet extends ConsumerWidget {
                   width: double.infinity,
                 ),
                 heightSpace(AppSizes.s30),
+                ListTile(
+                  title: Text(
+                    "Hotel Check-in",
+                    style: Theme.of(context).textTheme.titleLarge,
+                  ),
+                  subtitle: Text(
+                    "${reservationProvider.value![0].stays![0].name} Hotel",
+                    style: Theme.of(context).textTheme.bodySmall,
+                  ),
+                ),
+                heightSpace(AppSizes.s30),
+                Row(
+                  children: [
+                    // const Expanded(child: ListTile()),
+                    Expanded(
+                      child: ListTile(
+                        title: const Text(
+                          "From",
+                          // style: Theme.of(context).textTheme.bodyMedium,
+                        ),
+                        subtitle: Text(
+                          "${reservationProvider.value![0].startDate}",
+                          style: Theme.of(context).textTheme.bodySmall,
+                        ),
+                      ),
+                    ),
+                    Expanded(
+                      child: ListTile(
+                        title: const Text(
+                          "Till",
+                          // style: Theme.of(context).textTheme.bodyMedium,
+                        ),
+                        subtitle: Text(
+                          "${reservationProvider.value![0].endDate}",
+                          style: Theme.of(context).textTheme.bodySmall,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
               ],
             ),
             Positioned(

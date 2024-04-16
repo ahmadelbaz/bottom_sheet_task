@@ -140,7 +140,7 @@ ThemeData getDarkApplicationTheme() {
         color: ColorManager.grey4,
       ),
       titleLarge: getBoldTextStyle(
-        fontSize: FontSize.s18,
+        fontSize: FontSize.s24,
         color: ColorManager.white,
       ),
       // Ticket bootom part title
