@@ -123,6 +123,11 @@ ThemeData getDarkApplicationTheme() {
       color: ColorManager.white,
     ),
 
+    // Divider Theme
+    dividerTheme: const DividerThemeData(
+      color: ColorManager.darkGrey4,
+    ),
+
     // Text theme
     textTheme: TextTheme(
       bodyLarge: getSemiBoldTextStyle(

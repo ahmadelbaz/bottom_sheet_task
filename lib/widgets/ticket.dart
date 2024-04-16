@@ -71,7 +71,6 @@ class Ticket extends ConsumerWidget {
                           ],
                         ),
                         heightSpace(AppSizes.s16),
-                        // const Text('Ticket Typooo:'),
                       ],
                     ),
                   ),
