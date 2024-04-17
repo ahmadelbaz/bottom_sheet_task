@@ -5,6 +5,7 @@ import 'package:bottom_sheet_task_ahmad_elbaz/resources/value_manager.dart';
 import 'package:bottom_sheet_task_ahmad_elbaz/widgets/custom_bottom_sheet.dart';
 import 'package:bottom_sheet_task_ahmad_elbaz/widgets/custom_divider.dart';
 import 'package:bottom_sheet_task_ahmad_elbaz/widgets/location_container.dart';
+import 'package:bottom_sheet_task_ahmad_elbaz/widgets/rooms_section.dart';
 import 'package:bottom_sheet_task_ahmad_elbaz/widgets/ticket.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -141,9 +142,12 @@ class ReservationBottomSheet extends ConsumerWidget {
                         color: Theme.of(context).dividerTheme.color!,
                       ),
                       heightSpace(AppSizes.s45),
+                      RoomsSection(
+                          rooms:
+                              reservationProvider.value![0].stays![0].rooms!),
                     ],
                   ),
-                )
+                ),
               ],
             ),
             Positioned(
