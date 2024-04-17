@@ -54,7 +54,6 @@ class LocationContainer extends ConsumerWidget {
           ),
           const SizedBox(
             width: AppSizes.s100,
-            // color: Colors.purple,
             child: Image(
               image: AssetImage(AppAssets.locationImage),
             ),

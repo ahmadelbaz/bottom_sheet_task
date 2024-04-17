@@ -7,6 +7,16 @@ class AppStrings {
   static const String tickets = 'Tickets:';
   static const String ticketType = 'Ticket Type: ';
   static const String seat = 'Seat: ';
+  static const String hotelCheckIn = "Hotel Check-in";
+  static const String hotel = "Hotel";
+  static const String from = "From";
+  static const String till = "Till";
+  static const String stars = "Stars";
+  static const String roomCount = "Room Count";
+  static const String room = "Room";
+  static const String location = "Location:";
+  static const String gallery = "Gallery:";
+  static const String amenities = "Amenities";
 }
 
 class AppAssets {

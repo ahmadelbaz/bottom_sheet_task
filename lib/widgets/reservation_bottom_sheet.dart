@@ -46,11 +46,11 @@ class ReservationBottomSheet extends ConsumerWidget {
                     children: [
                       heightSpace(AppSizes.s40),
                       Text(
-                        "Hotel Check-in",
+                        AppStrings.hotelCheckIn,
                         style: Theme.of(context).textTheme.titleLarge,
                       ),
                       Text(
-                        "${reservationProvider.value![0].stays![0].name} Hotel",
+                        "${reservationProvider.value![0].stays![0].name} ${AppStrings.hotel}",
                         style: Theme.of(context).textTheme.bodySmall,
                       ),
                       heightSpace(AppSizes.s40),
@@ -61,7 +61,7 @@ class ReservationBottomSheet extends ConsumerWidget {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 const Text(
-                                  "From",
+                                  AppStrings.from,
                                 ),
                                 Text(
                                   "${reservationProvider.value![0].startDate}",
@@ -75,7 +75,7 @@ class ReservationBottomSheet extends ConsumerWidget {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 const Text(
-                                  "Till",
+                                  AppStrings.till,
                                 ),
                                 Text(
                                   "${reservationProvider.value![0].endDate}",
@@ -94,10 +94,10 @@ class ReservationBottomSheet extends ConsumerWidget {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 const Text(
-                                  "Stars",
+                                  AppStrings.stars,
                                 ),
                                 SizedBox(
-                                  height: 20,
+                                  height: AppSizes.s20,
                                   child: ListView.separated(
                                     separatorBuilder: (context, index) =>
                                         const SizedBox(width: AppSizes.s3),
@@ -107,7 +107,8 @@ class ReservationBottomSheet extends ConsumerWidget {
                                     itemBuilder: (item, index) {
                                       return Image(
                                         image: const AssetImage(
-                                            AppAssets.starIcon),
+                                          AppAssets.starIcon,
+                                        ),
                                         width: AppSizes.s18,
                                         height: AppSizes.s18,
                                         color: ref.watch(
@@ -125,9 +126,9 @@ class ReservationBottomSheet extends ConsumerWidget {
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                const Text('Room Count'),
+                                const Text(AppStrings.roomCount),
                                 Text(
-                                  "${reservationProvider.value![0].stays![0].rooms!.length} Room",
+                                  "${reservationProvider.value![0].stays![0].rooms!.length} ${AppStrings.room}",
                                   style: Theme.of(context).textTheme.bodySmall,
                                 ),
                               ],
@@ -136,7 +137,7 @@ class ReservationBottomSheet extends ConsumerWidget {
                         ],
                       ),
                       heightSpace(AppSizes.s40),
-                      const Text('Location:'),
+                      const Text(AppStrings.location),
                       LocationContainer(
                           address:
                               reservationProvider.value![0].stays![0].address!,
@@ -146,7 +147,7 @@ class ReservationBottomSheet extends ConsumerWidget {
                           lat: reservationProvider.value![0].stays![0].lat!,
                           long: reservationProvider.value![0].stays![0].lng!),
                       heightSpace(AppSizes.s40),
-                      const Text('Tickets:'),
+                      const Text(AppStrings.tickets),
                       heightSpace(AppSizes.s12),
                       Ticket(
                         userTicket:
@@ -160,7 +161,7 @@ class ReservationBottomSheet extends ConsumerWidget {
                       RoomsSection(
                         rooms: reservationProvider.value![0].stays![0].rooms!,
                       ),
-                      const Text('Gallery:'),
+                      const Text(AppStrings.gallery),
                       heightSpace(AppSizes.s10),
                       // We do this to add more image so that we can text the design
                       GallerySection(
@@ -171,7 +172,7 @@ class ReservationBottomSheet extends ConsumerWidget {
                         ],
                       ),
                       heightSpace(AppSizes.s40),
-                      const Text('Amenities'),
+                      const Text(AppStrings.amenities),
                       Text(
                         '${reservationProvider.value![0].stays![0].amenities}',
                         style: Theme.of(context).textTheme.bodySmall,
