@@ -1,4 +1,5 @@
 import 'package:bottom_sheet_task_ahmad_elbaz/resources/common_functions.dart';
+import 'package:bottom_sheet_task_ahmad_elbaz/resources/string_manager.dart';
 import 'package:bottom_sheet_task_ahmad_elbaz/resources/value_manager.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -51,9 +52,12 @@ class LocationContainer extends ConsumerWidget {
               ),
             ),
           ),
-          Container(
+          const SizedBox(
             width: AppSizes.s100,
-            color: Colors.purple,
+            // color: Colors.purple,
+            child: Image(
+              image: AssetImage(AppAssets.locationImage),
+            ),
           ),
         ],
       ),
