@@ -15,7 +15,7 @@ class ChangeThemeBar extends ConsumerWidget {
         leading: const Image(image: AssetImage(AppAssets.themeIcon)),
         title: Text(
           AppStrings.theme,
-          style: Theme.of(context).textTheme.titleLarge,
+          style: Theme.of(context).textTheme.bodyMedium,
         ),
         trailing: Switch(
           value: ref.watch(isLightStateProvider),

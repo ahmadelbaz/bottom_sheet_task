@@ -1,4 +1,6 @@
+import 'package:bottom_sheet_task_ahmad_elbaz/providers/all_providers.dart';
 import 'package:bottom_sheet_task_ahmad_elbaz/providers/reservation_provider.dart';
+import 'package:bottom_sheet_task_ahmad_elbaz/resources/color_manager.dart';
 import 'package:bottom_sheet_task_ahmad_elbaz/resources/common_functions.dart';
 import 'package:bottom_sheet_task_ahmad_elbaz/resources/string_manager.dart';
 import 'package:bottom_sheet_task_ahmad_elbaz/resources/value_manager.dart';
@@ -103,10 +105,15 @@ class ReservationBottomSheet extends ConsumerWidget {
                                     itemCount: reservationProvider
                                         .value![0].stays![0].stars!,
                                     itemBuilder: (item, index) {
-                                      return const Image(
-                                        image: AssetImage(AppAssets.starIcon),
+                                      return Image(
+                                        image: const AssetImage(
+                                            AppAssets.starIcon),
                                         width: AppSizes.s18,
                                         height: AppSizes.s18,
+                                        color: ref.watch(
+                                                isLightStateProvider) // We will change this approach and use a Theme Extension
+                                            ? ColorManager.lightStar
+                                            : ColorManager.darkStar,
                                       );
                                     },
                                   ),
@@ -130,7 +137,14 @@ class ReservationBottomSheet extends ConsumerWidget {
                       ),
                       heightSpace(AppSizes.s40),
                       const Text('Location:'),
-                      const LocationContainer(),
+                      LocationContainer(
+                          address:
+                              reservationProvider.value![0].stays![0].address!,
+                          hotelName: reservationProvider
+                              .value![0].stays![0].name
+                              .toString(),
+                          lat: reservationProvider.value![0].stays![0].lat!,
+                          long: reservationProvider.value![0].stays![0].lng!),
                       heightSpace(AppSizes.s40),
                       const Text('Tickets:'),
                       heightSpace(AppSizes.s12),

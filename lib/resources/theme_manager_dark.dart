@@ -144,6 +144,7 @@ ThemeData getDarkApplicationTheme() {
         fontSize: FontSize.s15,
         color: ColorManager.grey4,
       ),
+      // Hotel Chekc-in text
       titleLarge: getBoldTextStyle(
         fontSize: FontSize.s24,
         color: ColorManager.white,
@@ -153,13 +154,14 @@ ThemeData getDarkApplicationTheme() {
         fontSize: FontSize.s15,
         color: ColorManager.white,
       ),
-      titleSmall: getRegularTextStyle(
-        fontSize: FontSize.s12,
-        color: ColorManager.lightPrimary,
+      // Title Text in Location section
+      titleSmall: getBoldTextStyle(
+        fontSize: FontSize.s14,
+        color: ColorManager.darkGrey5,
       ),
-      displayMedium: getMediumTextStyle(
-        fontSize: FontSize.s12,
-        color: ColorManager.lightPrimary,
+      displayMedium: getRegularTextStyle(
+        fontSize: FontSize.s14,
+        color: ColorManager.darkGrey5,
       ),
       displaySmall: getRegularTextStyle(
         fontSize: FontSize.s11,
