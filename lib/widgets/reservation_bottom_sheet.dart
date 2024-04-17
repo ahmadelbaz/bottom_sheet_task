@@ -4,6 +4,7 @@ import 'package:bottom_sheet_task_ahmad_elbaz/resources/string_manager.dart';
 import 'package:bottom_sheet_task_ahmad_elbaz/resources/value_manager.dart';
 import 'package:bottom_sheet_task_ahmad_elbaz/widgets/custom_bottom_sheet.dart';
 import 'package:bottom_sheet_task_ahmad_elbaz/widgets/custom_divider.dart';
+import 'package:bottom_sheet_task_ahmad_elbaz/widgets/gallery_section.dart';
 import 'package:bottom_sheet_task_ahmad_elbaz/widgets/location_container.dart';
 import 'package:bottom_sheet_task_ahmad_elbaz/widgets/rooms_section.dart';
 import 'package:bottom_sheet_task_ahmad_elbaz/widgets/ticket.dart';
@@ -143,8 +144,25 @@ class ReservationBottomSheet extends ConsumerWidget {
                       ),
                       heightSpace(AppSizes.s45),
                       RoomsSection(
-                          rooms:
-                              reservationProvider.value![0].stays![0].rooms!),
+                        rooms: reservationProvider.value![0].stays![0].rooms!,
+                      ),
+                      const Text('Gallery:'),
+                      heightSpace(AppSizes.s10),
+                      // We do this to add more image so that we can text the design
+                      GallerySection(
+                        images: [
+                          ...reservationProvider
+                              .value![0].stays![0].stayImages!,
+                          ...reservationProvider.value![0].stays![0].stayImages!
+                        ],
+                      ),
+                      heightSpace(AppSizes.s40),
+                      const Text('Amenities'),
+                      Text(
+                        '${reservationProvider.value![0].stays![0].amenities}',
+                        style: Theme.of(context).textTheme.bodySmall,
+                      ),
+                      heightSpace(AppSizes.s45),
                     ],
                   ),
                 ),
