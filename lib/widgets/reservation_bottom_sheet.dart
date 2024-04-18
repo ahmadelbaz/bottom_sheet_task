@@ -4,6 +4,7 @@ import 'package:bottom_sheet_task_ahmad_elbaz/resources/color_manager.dart';
 import 'package:bottom_sheet_task_ahmad_elbaz/resources/common_functions.dart';
 import 'package:bottom_sheet_task_ahmad_elbaz/resources/string_manager.dart';
 import 'package:bottom_sheet_task_ahmad_elbaz/resources/value_manager.dart';
+import 'package:bottom_sheet_task_ahmad_elbaz/widgets/b_s_head.dart';
 import 'package:bottom_sheet_task_ahmad_elbaz/widgets/custom_bottom_sheet.dart';
 import 'package:bottom_sheet_task_ahmad_elbaz/widgets/custom_divider.dart';
 import 'package:bottom_sheet_task_ahmad_elbaz/widgets/gallery_section.dart';
@@ -100,8 +101,10 @@ class ReservationBottomSheet extends ConsumerWidget {
                                 const Text(
                                   AppStrings.stars,
                                 ),
-                                SizedBox(
-                                  height: AppSizes.s20,
+                                Container(
+                                  constraints: const BoxConstraints(
+                                    maxHeight: AppSizes.s20,
+                                  ),
                                   child: ListView.separated(
                                     separatorBuilder: (context, index) =>
                                         const SizedBox(width: AppSizes.s3),
@@ -187,39 +190,11 @@ class ReservationBottomSheet extends ConsumerWidget {
                 ),
               ],
             ),
-            Positioned(
-              top: 0.0,
-              left: 0.0,
-              right: 0.0,
-              height: AppSizes.s30, // Adjust grab bar height as needed
-              child: NotificationListener<ScrollNotification>(
-                onNotification: (ScrollNotification notification) {
-                  if (notification is ScrollUpdateNotification) {
-                    scrollController?.jumpTo(notification.metrics.pixels);
-                  }
-                  return true;
-                },
-                child: Container(
-                  color: Theme.of(context)
-                      .bottomSheetTheme
-                      .dragHandleColor!
-                      .withOpacity(0.8),
-                  child: Center(
-                    child: Container(
-                      width: AppSizes.s50,
-                      height: AppSizes.s6,
-                      decoration: BoxDecoration(
-                        color: Theme.of(context)
-                            .bottomSheetTheme
-                            .modalBackgroundColor,
-                        borderRadius: const BorderRadius.all(
-                          Radius.circular(AppSizes.s10),
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
-              ),
+            BottomSheetHead(
+              scrollController: scrollController,
+              color: ref.watch(isLightStateProvider)
+                  ? ColorManager.grey1.withOpacity(AppSizes.s0_8)
+                  : ColorManager.darkDraggerColor.withOpacity(AppSizes.s0_8),
             ),
           ],
         ),

@@ -1,7 +1,10 @@
+import 'package:bottom_sheet_task_ahmad_elbaz/providers/all_providers.dart';
 import 'package:bottom_sheet_task_ahmad_elbaz/providers/reservation_provider.dart';
+import 'package:bottom_sheet_task_ahmad_elbaz/resources/color_manager.dart';
 import 'package:bottom_sheet_task_ahmad_elbaz/resources/common_functions.dart';
 import 'package:bottom_sheet_task_ahmad_elbaz/resources/string_manager.dart';
 import 'package:bottom_sheet_task_ahmad_elbaz/resources/value_manager.dart';
+import 'package:bottom_sheet_task_ahmad_elbaz/widgets/b_s_head.dart';
 import 'package:bottom_sheet_task_ahmad_elbaz/widgets/custom_bottom_sheet.dart';
 import 'package:bottom_sheet_task_ahmad_elbaz/widgets/ticket.dart';
 import 'package:flutter/material.dart';
@@ -49,39 +52,11 @@ class TicketBottomSheet extends ConsumerWidget {
                 ),
               ),
             ),
-            Positioned(
-              top: 0.0,
-              left: 0.0,
-              right: 0.0,
-              height: AppSizes.s30, // Adjust grab bar height as needed
-              child: NotificationListener<ScrollNotification>(
-                onNotification: (ScrollNotification notification) {
-                  if (notification is ScrollUpdateNotification) {
-                    scrollController?.jumpTo(notification.metrics.pixels);
-                  }
-                  return true;
-                },
-                child: Container(
-                  color: Theme.of(context)
-                      .bottomSheetTheme
-                      .dragHandleColor!
-                      .withOpacity(0.8),
-                  child: Center(
-                    child: Container(
-                      width: AppSizes.s50,
-                      height: AppSizes.s6,
-                      decoration: BoxDecoration(
-                        color: Theme.of(context)
-                            .bottomSheetTheme
-                            .modalBackgroundColor,
-                        borderRadius: const BorderRadius.all(
-                          Radius.circular(AppSizes.s10),
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
-              ),
+            BottomSheetHead(
+              scrollController: scrollController,
+              color: ref.watch(isLightStateProvider)
+                  ? ColorManager.white
+                  : ColorManager.darkGrey3.withOpacity(AppSizes.s0_8),
             ),
           ],
         ),
