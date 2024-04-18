@@ -68,7 +68,9 @@ flutter:
     - assets/icons/theme.png
     - assets/icons/star.png
     - assets/icons/marker.png
+    - assets/icons/dark_marker.png
     - assets/images/location.png
+    - assets/images/light_location.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

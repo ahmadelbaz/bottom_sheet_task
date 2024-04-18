@@ -1,3 +1,4 @@
+import 'package:bottom_sheet_task_ahmad_elbaz/providers/all_providers.dart';
 import 'package:bottom_sheet_task_ahmad_elbaz/resources/common_functions.dart';
 import 'package:bottom_sheet_task_ahmad_elbaz/resources/string_manager.dart';
 import 'package:bottom_sheet_task_ahmad_elbaz/resources/value_manager.dart';
@@ -52,17 +53,21 @@ class LocationContainer extends ConsumerWidget {
               ),
             ),
           ),
-          const SizedBox(
+          SizedBox(
             width: AppSizes.s100,
             child: Stack(
               children: [
                 Image(
-                  image: AssetImage(AppAssets.locationImage),
+                  image: AssetImage(ref.watch(isLightStateProvider)
+                      ? AppAssets.lightLocationImage
+                      : AppAssets.locationImage),
                 ),
                 Align(
                   alignment: Alignment.center,
                   child: Image(
-                    image: AssetImage(AppAssets.markerIcon),
+                    image: AssetImage(ref.watch(isLightStateProvider)
+                        ? AppAssets.darkMarkerIcon
+                        : AppAssets.markerIcon),
                   ),
                 ),
               ],

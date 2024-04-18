@@ -31,6 +31,8 @@ class AppAssets {
   static const themeIcon = 'assets/icons/theme.png';
   static const starIcon = 'assets/icons/star.png';
   static const markerIcon = 'assets/icons/marker.png';
+  static const darkMarkerIcon = 'assets/icons/dark_marker.png';
+  static const lightLocationImage = 'assets/images/light_location.png';
   static const locationImage = 'assets/images/location.png';
 }
 
