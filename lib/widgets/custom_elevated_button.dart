@@ -13,28 +13,23 @@ class CustomElevatedButton extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     return SizedBox(
-      width: MediaQuery.of(context).size.width * 0.7,
+      width: MediaQuery.of(context).size.width * AppSizes.s0_7,
       height: AppSizes.s50,
       child: ElevatedButton(
         onPressed: () {
           showFlexibleBottomSheet(
             minHeight: 0,
-            initHeight: 0.8,
-            maxHeight: 1,
+            initHeight: AppSizes.s0_9,
+            maxHeight: AppSizes.s1,
             // Maybe change something here later
             anchors: [
               0,
-              0.5,
-              0.55,
-              0.6,
-              0.65,
-              0.7,
-              0.75,
-              0.8,
-              0.85,
-              0.9,
-              0.95,
-              1
+              AppSizes.s0_5,
+              AppSizes.s0_6,
+              AppSizes.s0_7,
+              AppSizes.s0_8,
+              AppSizes.s0_9,
+              AppSizes.s1,
             ],
             bottomSheetBorderRadius:
                 const BorderRadius.vertical(top: Radius.circular(AppSizes.s20)),

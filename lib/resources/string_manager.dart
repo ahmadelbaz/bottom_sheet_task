@@ -4,9 +4,9 @@ class AppStrings {
   static const String showIosTicket = 'Show IOS Ticket';
   static const String showAndroidTicket = 'Show Android Ticket';
   static const String theme = 'Theme';
-  static const String tickets = 'Tickets:';
-  static const String ticketType = 'Ticket Type: ';
-  static const String seat = 'Seat: ';
+  static const String tickets = 'Tickets';
+  static const String ticketType = 'Ticket Type';
+  static const String seat = 'Seat';
   static const String hotelCheckIn = "Hotel Check-in";
   static const String hotel = "Hotel";
   static const String from = "From";
@@ -14,9 +14,15 @@ class AppStrings {
   static const String stars = "Stars";
   static const String roomCount = "Room Count";
   static const String room = "Room";
-  static const String location = "Location:";
-  static const String gallery = "Gallery:";
+  static const String location = "Location";
+  static const String gallery = "Gallery";
   static const String amenities = "Amenities";
+  static const String roomReservation = "Room Reservation";
+  static const String guests = "Guest(s)";
+  static const String roomType = "Room Type";
+  static const String roomNumber = "Room Number";
+  static const String sleeps = "Sleeps";
+  static const String address = "Address";
 }
 
 class AppAssets {

@@ -36,7 +36,7 @@ class TicketBottomSheet extends ConsumerWidget {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            const Text(AppStrings.tickets),
+                            const Text('${AppStrings.tickets}:'),
                             heightSpace(AppSizes.s12),
                             Ticket(
                               userTicket: ticketData![0],

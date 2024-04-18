@@ -48,7 +48,7 @@ class Ticket extends ConsumerWidget {
                           children: [
                             widthSpace(AppSizes.s16),
                             Text(
-                              AppStrings.ticketType,
+                              '${AppStrings.ticketType}: ',
                               style: Theme.of(context).textTheme.titleMedium,
                             ),
                             Text(
@@ -61,7 +61,7 @@ class Ticket extends ConsumerWidget {
                           children: [
                             widthSpace(AppSizes.s16),
                             Text(
-                              AppStrings.seat,
+                              '${AppStrings.seat}: ',
                               style: Theme.of(context).textTheme.titleMedium,
                             ),
                             Text(

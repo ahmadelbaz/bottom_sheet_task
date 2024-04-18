@@ -28,7 +28,7 @@ class LocationContainer extends ConsumerWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           SizedBox(
-            width: MediaQuery.of(context).size.width * 0.5,
+            width: MediaQuery.of(context).size.width * AppSizes.s0_5,
             child: Padding(
               padding:
                   const EdgeInsets.only(top: AppSizes.s15, left: AppSizes.s14),
@@ -36,13 +36,13 @@ class LocationContainer extends ConsumerWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    '$hotelName$countryName Hotel',
+                    '$hotelName$countryName ${AppStrings.hotel}',
                     style: Theme.of(context).textTheme.titleSmall,
                     maxLines: 1,
                   ),
                   heightSpace(AppSizes.s12),
                   Text(
-                    'Address : $address',
+                    '${AppStrings.address} : $address',
                     style: Theme.of(context).textTheme.displayMedium,
                     softWrap: true,
                     maxLines: 3,

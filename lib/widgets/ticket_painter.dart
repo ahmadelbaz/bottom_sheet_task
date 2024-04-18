@@ -6,7 +6,7 @@ class TicketPainter extends CustomPainter {
   final Color bgColor;
 
   static const _cornerGap = 0.0;
-  static const _cutoutRadius = 10.0;
+  static const _cutoutRadius = AppSizes.s10;
   static const _cutoutDiameter = _cutoutRadius * 2;
 
   TicketPainter({required this.bgColor, required this.borderColor});
@@ -31,14 +31,14 @@ class TicketPainter extends CustomPainter {
       ..color = bgColor;
 
     final paintBorder = Paint()
-      ..strokeWidth = 1
+      ..strokeWidth = AppSizes.s1
       ..style = PaintingStyle.stroke
       ..strokeCap = StrokeCap.round
       ..color = borderColor;
 
     final paintDottedLine = Paint()
-      ..color = borderColor.withOpacity(0.5)
-      ..strokeWidth = 1.2;
+      ..color = borderColor.withOpacity(AppSizes.s0_5)
+      ..strokeWidth = AppSizes.s1_2;
 
     var path = Path();
 

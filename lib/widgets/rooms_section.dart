@@ -1,5 +1,6 @@
 import 'package:bottom_sheet_task_ahmad_elbaz/models/rooms.dart';
 import 'package:bottom_sheet_task_ahmad_elbaz/resources/common_functions.dart';
+import 'package:bottom_sheet_task_ahmad_elbaz/resources/string_manager.dart';
 import 'package:bottom_sheet_task_ahmad_elbaz/resources/value_manager.dart';
 import 'package:bottom_sheet_task_ahmad_elbaz/widgets/custom_divider.dart';
 import 'package:bottom_sheet_task_ahmad_elbaz/widgets/guests_section.dart';
@@ -22,13 +23,13 @@ class RoomsSection extends ConsumerWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                  'Room Reservation 0${index + 1}'), // We can handle this better
+                  '${AppStrings.roomReservation} ${index + 1}'), // We can handle this better
               heightSpace(AppSizes.s35),
-              const Text('Guest(s):'),
+              const Text('${AppStrings.guests}:'),
               heightSpace(AppSizes.s10),
               GuestsSection(guests: rooms[index].guests!),
               heightSpace(AppSizes.s35),
-              const Text('Room Type'),
+              const Text(AppStrings.roomType),
               Text(
                 '${rooms[index].roomTypeName}',
                 style: Theme.of(context).textTheme.bodySmall,
@@ -41,7 +42,7 @@ class RoomsSection extends ConsumerWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         const Text(
-                          "Room Number",
+                          AppStrings.roomNumber,
                         ),
                         Text(
                           "${rooms[0].roomNumber}",
@@ -55,7 +56,7 @@ class RoomsSection extends ConsumerWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         const Text(
-                          "Sleeps",
+                          AppStrings.sleeps,
                         ),
                         Text(
                           "${rooms[0].roomCapacity}",

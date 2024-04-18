@@ -40,7 +40,7 @@ class ReservationBottomSheet extends ConsumerWidget {
                   width: double.infinity,
                 ),
                 Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 25),
+                  padding: const EdgeInsets.symmetric(horizontal: AppSizes.s25),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -137,7 +137,7 @@ class ReservationBottomSheet extends ConsumerWidget {
                         ],
                       ),
                       heightSpace(AppSizes.s40),
-                      const Text(AppStrings.location),
+                      const Text('${AppStrings.location}:'),
                       LocationContainer(
                           address:
                               reservationProvider.value![0].stays![0].address!,
@@ -147,7 +147,7 @@ class ReservationBottomSheet extends ConsumerWidget {
                           lat: reservationProvider.value![0].stays![0].lat!,
                           long: reservationProvider.value![0].stays![0].lng!),
                       heightSpace(AppSizes.s40),
-                      const Text(AppStrings.tickets),
+                      const Text('${AppStrings.tickets}:'),
                       heightSpace(AppSizes.s12),
                       Ticket(
                         userTicket:
@@ -161,7 +161,7 @@ class ReservationBottomSheet extends ConsumerWidget {
                       RoomsSection(
                         rooms: reservationProvider.value![0].stays![0].rooms!,
                       ),
-                      const Text(AppStrings.gallery),
+                      const Text('${AppStrings.gallery}:'),
                       heightSpace(AppSizes.s10),
                       // We do this to add more image so that we can text the design
                       GallerySection(

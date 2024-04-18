@@ -15,17 +15,16 @@ class CustomTextButton extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    // final scrollController = ScrollController();
     return SizedBox(
-      width: MediaQuery.of(context).size.width * 0.7,
+      width: MediaQuery.of(context).size.width * AppSizes.s0_7,
       height: AppSizes.s50,
       child: TextButton(
         onPressed: () async {
           showFlexibleBottomSheet(
             minHeight: 0,
-            initHeight: 0.5,
-            maxHeight: 1,
-            anchors: [0, 0.5, 1],
+            initHeight: AppSizes.s0_5,
+            maxHeight: AppSizes.s1,
+            anchors: [0, AppSizes.s0_5, AppSizes.s1],
             bottomSheetBorderRadius:
                 const BorderRadius.vertical(top: Radius.circular(AppSizes.s20)),
             barrierColor: Theme.of(context).bottomSheetTheme.modalBarrierColor,
