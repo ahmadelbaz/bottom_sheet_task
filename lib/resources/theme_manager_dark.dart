@@ -74,34 +74,13 @@ ThemeData getDarkApplicationTheme() {
         textStyle: getBoldTextStyle(
           fontSize: FontSize.s16,
         ),
-        // shape: RoundedRectangleBorder(
-        //   borderRadius: BorderRadius.circular(AppSizes.s20),
-        //   side: const BorderSide(
-        //     color: ColorManager.darkPrimary,
-        //     width: AppSizes.s50,
-        //   ),
-        // ),
       ),
     ),
-
-    // Outline Button Theme
-    // outlinedButtonTheme: OutlinedButtonThemeData(
-    //   style: ButtonStyle(
-    //     shape: MaterialStateProperty.all(
-    //       const RoundedRectangleBorder(
-    //         side: BorderSide(
-    //           color: Colors.purple,
-    //           width: AppSizes.s50,
-    //         ),
-    //       ),
-    //     ),
-    //   ),
-    // ),
 
     // Bottom Sheet Theme
     bottomSheetTheme: BottomSheetThemeData(
       backgroundColor: ColorManager.black,
-      modalBarrierColor: ColorManager.black,
+      modalBarrierColor: ColorManager.darkBackground,
       // Color for darker dragHandler (Maybe change this concpet later)
       // surfaceTintColor: Colors.purple,
       // Color of drag handler child (Maybe change this concpet later)
@@ -124,6 +103,15 @@ ThemeData getDarkApplicationTheme() {
     // Divider Theme
     dividerTheme: const DividerThemeData(
       color: ColorManager.darkGrey4,
+    ),
+
+    // Switch theme
+    switchTheme: SwitchThemeData(
+      thumbColor: MaterialStateProperty.all<Color>(ColorManager.darkGreyLight),
+      trackColor: MaterialStateProperty.all<Color>(ColorManager.darkGrey),
+      trackOutlineColor:
+          MaterialStateProperty.all<Color>(ColorManager.darkGreyBorder),
+      trackOutlineWidth: MaterialStateProperty.all(AppSizes.s1),
     ),
 
     // Text theme
@@ -165,14 +153,6 @@ ThemeData getDarkApplicationTheme() {
         fontSize: FontSize.s11,
         color: ColorManager.grey2,
       ),
-    ),
-    // Switch theme
-    switchTheme: SwitchThemeData(
-      thumbColor: MaterialStateProperty.all<Color>(ColorManager.darkGreyLight),
-      trackColor: MaterialStateProperty.all<Color>(ColorManager.darkGrey),
-      trackOutlineColor:
-          MaterialStateProperty.all<Color>(ColorManager.darkGreyBorder),
-      trackOutlineWidth: MaterialStateProperty.all(AppSizes.s1),
     ),
 
     // Input decoration theme

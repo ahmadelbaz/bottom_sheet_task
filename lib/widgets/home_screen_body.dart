@@ -12,24 +12,29 @@ class HomeScreenBody extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    return Column(
-      children: [
-        heightSpace(AppSizes.s50),
-        const ChangeThemeBar(),
-        const Spacer(),
-        const CustomElevatedButton(text: AppStrings.openReservation),
-        heightSpace(AppSizes.s20),
-        const CustomTextButton(
-          text: AppStrings.showIosTicket,
-          borderWidth: AppSizes.s1,
+    return Center(
+      child: Container(
+        constraints: const BoxConstraints(maxWidth: 375),
+        child: Column(
+          children: [
+            heightSpace(AppSizes.s50),
+            const ChangeThemeBar(),
+            const Spacer(),
+            const CustomElevatedButton(text: AppStrings.openReservation),
+            heightSpace(AppSizes.s20),
+            const CustomTextButton(
+              text: AppStrings.showIosTicket,
+              borderWidth: AppSizes.s1,
+            ),
+            heightSpace(AppSizes.s20),
+            const CustomTextButton(
+              text: AppStrings.showAndroidTicket,
+              borderWidth: 0,
+            ),
+            heightSpace(AppSizes.s50),
+          ],
         ),
-        heightSpace(AppSizes.s20),
-        const CustomTextButton(
-          text: AppStrings.showAndroidTicket,
-          borderWidth: 0,
-        ),
-        heightSpace(AppSizes.s50),
-      ],
+      ),
     );
   }
 }

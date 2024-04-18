@@ -28,7 +28,7 @@ class LocationContainer extends ConsumerWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           SizedBox(
-            width: MediaQuery.of(context).size.width * AppSizes.s0_5,
+            width: 375 / 2,
             child: Padding(
               padding:
                   const EdgeInsets.only(top: AppSizes.s15, left: AppSizes.s14),

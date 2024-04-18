@@ -80,6 +80,7 @@ ThemeData getLightApplicationTheme() {
     bottomSheetTheme: BottomSheetThemeData(
       backgroundColor: ColorManager.lightBottomSheet,
       modalBarrierColor: ColorManager.lightModal,
+      constraints: const BoxConstraints(maxWidth: 375),
       // Color for darker dragHandler (Maybe change this concpet later)
       // surfaceTintColor: ColorManager.darkDraggerColor,
       // Color of drag handler child (Maybe change this concpet later)
@@ -94,14 +95,25 @@ ThemeData getLightApplicationTheme() {
       showDragHandle: true,
     ),
 
+    // Progress Indicator Theme
+    progressIndicatorTheme: const ProgressIndicatorThemeData(
+      color: ColorManager.black,
+    ),
+
+    // Divider Theme
+    dividerTheme: const DividerThemeData(
+      color: ColorManager.darkGrey4,
+    ),
+
     // Switch theme
     switchTheme: SwitchThemeData(
       thumbColor: MaterialStateProperty.all<Color>(ColorManager.lightBorder),
       trackColor: MaterialStateProperty.all<Color>(ColorManager.lightGrey),
       trackOutlineColor:
           MaterialStateProperty.all<Color>(ColorManager.lightBorder),
-      trackOutlineWidth: MaterialStateProperty.all(1),
+      trackOutlineWidth: MaterialStateProperty.all(AppSizes.s1),
     ),
+
     // Text theme
     textTheme: TextTheme(
       bodyLarge: getSemiBoldTextStyle(
