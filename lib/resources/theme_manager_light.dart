@@ -15,9 +15,9 @@ ThemeData getLightApplicationTheme() {
     splashColor: ColorManager.lightBackground,
     fontFamily: FontConstants.fontFamily,
     colorScheme: const ColorScheme(
-      primary: ColorManager.lightPrimary, // Done
+      primary: ColorManager.darkPrimary, // Done
       surface: ColorManager.white, // Done
-      background: ColorManager.white,
+      background: ColorManager.lightBackground,
       brightness: Brightness.light, // Done
       error: ColorManager.red,
       onBackground: ColorManager.lightBackground, // Done
@@ -26,6 +26,7 @@ ThemeData getLightApplicationTheme() {
       onSecondary: Colors.white, // Done
       onSurface: ColorManager.lightGrey, // Done
       secondary: ColorManager.darkPrimary,
+      primaryContainer: ColorManager.grey2,
     ),
 
     // Card view theme
@@ -48,27 +49,21 @@ ThemeData getLightApplicationTheme() {
     ),
 
     // Button theme
-    buttonTheme: ButtonThemeData(
+    buttonTheme: const ButtonThemeData(
       buttonColor: ColorManager.lightPrimary,
       focusColor: ColorManager.darkPrimary,
       hoverColor: ColorManager.lightBackground,
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(AppSizes.s12),
-      ),
     ),
 
     // Elevated Button theme
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
         backgroundColor: ColorManager.lightPrimary,
-        foregroundColor: ColorManager.darkPrimary,
-        textStyle: getRegularTextStyle(
+        textStyle: getBoldTextStyle(
           fontSize: FontSize.s16,
-          color: ColorManager.white,
+          color: ColorManager.darkPrimary,
         ),
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(AppSizes.s12),
-        ),
+        shape: const LinearBorder(),
       ),
     ),
     // Text Button theme
@@ -80,6 +75,25 @@ ThemeData getLightApplicationTheme() {
         ),
       ),
     ),
+
+// Bottom Sheet Theme
+    bottomSheetTheme: BottomSheetThemeData(
+      backgroundColor: ColorManager.lightBottomSheet,
+      modalBarrierColor: ColorManager.lightModal,
+      // Color for darker dragHandler (Maybe change this concpet later)
+      // surfaceTintColor: ColorManager.darkDraggerColor,
+      // Color of drag handler child (Maybe change this concpet later)
+      modalBackgroundColor: ColorManager.black.withOpacity(0.63),
+      // surfaceTintColor: Colors.blue,
+      shape: const RoundedRectangleBorder(
+        // Adjust corner shape
+        borderRadius: BorderRadius.vertical(
+          top: Radius.circular(AppSizes.s20),
+        ),
+      ),
+      showDragHandle: true,
+    ),
+
     // Switch theme
     switchTheme: SwitchThemeData(
       thumbColor: MaterialStateProperty.all<Color>(ColorManager.lightBorder),

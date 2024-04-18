@@ -18,6 +18,8 @@ class ColorManager {
   // Light Theme Colors
   static const Color lightBackground = Color(0xFFefefef);
   static const Color lightPrimary = Color(0xFF0E1A2D);
+  static const Color lightBottomSheet = Color(0xFFFAFAFA);
+  static const Color lightModal = Color(0xFFEBEBEB);
   static const Color lightStar = Color(0xffFFD979);
   static const Color lightGrey = Color(0xFFE3E3E3);
   static const Color lightBorder = Color(0xFF04132B);

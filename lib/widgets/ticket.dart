@@ -1,5 +1,4 @@
 import 'package:bottom_sheet_task_ahmad_elbaz/models/user_tickets.dart';
-import 'package:bottom_sheet_task_ahmad_elbaz/resources/color_manager.dart';
 import 'package:bottom_sheet_task_ahmad_elbaz/resources/common_functions.dart';
 import 'package:bottom_sheet_task_ahmad_elbaz/resources/string_manager.dart';
 import 'package:bottom_sheet_task_ahmad_elbaz/resources/value_manager.dart';
@@ -21,7 +20,7 @@ class Ticket extends ConsumerWidget {
                 height: AppSizes.s150,
                 child: CustomPaint(
                   painter: TicketPainter(
-                    borderColor: ColorManager.black,
+                    dottedColor: Theme.of(context).primaryColorLight,
                     bgColor: Theme.of(context).colorScheme.primaryContainer,
                   ),
                   child: SizedBox(

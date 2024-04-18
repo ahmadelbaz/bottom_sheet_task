@@ -2,14 +2,14 @@ import 'package:bottom_sheet_task_ahmad_elbaz/resources/value_manager.dart';
 import 'package:flutter/material.dart';
 
 class TicketPainter extends CustomPainter {
-  final Color borderColor;
+  final Color dottedColor;
   final Color bgColor;
 
   static const _cornerGap = 0.0;
   static const _cutoutRadius = AppSizes.s10;
   static const _cutoutDiameter = _cutoutRadius * 2;
 
-  TicketPainter({required this.bgColor, required this.borderColor});
+  TicketPainter({required this.bgColor, required this.dottedColor});
 
   @override
   void paint(Canvas canvas, Size size) {
@@ -34,10 +34,10 @@ class TicketPainter extends CustomPainter {
       ..strokeWidth = AppSizes.s1
       ..style = PaintingStyle.stroke
       ..strokeCap = StrokeCap.round
-      ..color = borderColor;
+      ..color = Colors.transparent;
 
     final paintDottedLine = Paint()
-      ..color = borderColor.withOpacity(AppSizes.s0_5)
+      ..color = dottedColor
       ..strokeWidth = AppSizes.s1_2;
 
     var path = Path();

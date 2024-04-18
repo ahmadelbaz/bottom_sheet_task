@@ -8,23 +8,22 @@ ThemeData getDarkApplicationTheme() {
   return ThemeData(
     // Main Colors
     primaryColor: ColorManager.darkPrimary,
-    primarySwatch: Colors.teal,
-    primaryColorLight: ColorManager.white,
+    primaryColorLight: ColorManager.black,
     primaryColorDark: ColorManager.darkPrimary,
     disabledColor: ColorManager.grey1,
     splashColor: ColorManager.lightBackground,
     fontFamily: FontConstants.fontFamily,
     colorScheme: const ColorScheme(
-      primary: ColorManager.lightPrimary, // Done
-      surface: ColorManager.white, // Done
+      primary: ColorManager.lightPrimary,
+      surface: ColorManager.white,
       background: ColorManager.darkBackground,
-      brightness: Brightness.light, // Done
+      brightness: Brightness.light,
       error: ColorManager.red,
-      onBackground: ColorManager.lightBackground, // Done
+      onBackground: ColorManager.lightBackground,
       onError: Colors.purple,
-      onPrimary: ColorManager.white, // Done
-      onSecondary: Colors.white, // Done
-      onSurface: ColorManager.lightGrey, // Done
+      onPrimary: ColorManager.white,
+      onSecondary: Colors.white,
+      onSurface: ColorManager.lightGrey,
       secondary: ColorManager.darkPrimary,
       primaryContainer: ColorManager.darkGrey2,
     ),
@@ -62,7 +61,7 @@ ThemeData getDarkApplicationTheme() {
         backgroundColor: ColorManager.darkPrimary,
         textStyle: getBoldTextStyle(
           fontSize: FontSize.s16,
-          color: ColorManager.white,
+          color: ColorManager.lightPrimary,
         ),
         shape: const LinearBorder(),
       ),
@@ -75,41 +74,40 @@ ThemeData getDarkApplicationTheme() {
         textStyle: getBoldTextStyle(
           fontSize: FontSize.s16,
         ),
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(AppSizes.s20),
-          side: const BorderSide(
-            color: ColorManager.darkPrimary,
-            width: AppSizes.s50,
-          ),
-        ),
+        // shape: RoundedRectangleBorder(
+        //   borderRadius: BorderRadius.circular(AppSizes.s20),
+        //   side: const BorderSide(
+        //     color: ColorManager.darkPrimary,
+        //     width: AppSizes.s50,
+        //   ),
+        // ),
       ),
     ),
 
     // Outline Button Theme
-    outlinedButtonTheme: OutlinedButtonThemeData(
-      style: ButtonStyle(
-        shape: MaterialStateProperty.all(
-          const RoundedRectangleBorder(
-            side: BorderSide(
-              color: ColorManager.darkPrimary,
-              width: AppSizes.s50,
-            ),
-          ),
-        ),
-      ),
-    ),
+    // outlinedButtonTheme: OutlinedButtonThemeData(
+    //   style: ButtonStyle(
+    //     shape: MaterialStateProperty.all(
+    //       const RoundedRectangleBorder(
+    //         side: BorderSide(
+    //           color: Colors.purple,
+    //           width: AppSizes.s50,
+    //         ),
+    //       ),
+    //     ),
+    //   ),
+    // ),
 
     // Bottom Sheet Theme
-    bottomSheetTheme: const BottomSheetThemeData(
+    bottomSheetTheme: BottomSheetThemeData(
       backgroundColor: ColorManager.black,
       modalBarrierColor: ColorManager.black,
-      dragHandleColor: ColorManager.darkGrey3,
       // Color for darker dragHandler (Maybe change this concpet later)
-      surfaceTintColor: ColorManager.darkDraggerColor,
+      // surfaceTintColor: Colors.purple,
       // Color of drag handler child (Maybe change this concpet later)
-      modalBackgroundColor: ColorManager.white,
+      modalBackgroundColor: ColorManager.white.withOpacity(0.63),
       // surfaceTintColor: Colors.blue,
-      shape: RoundedRectangleBorder(
+      shape: const RoundedRectangleBorder(
         // Adjust corner shape
         borderRadius: BorderRadius.vertical(
           top: Radius.circular(AppSizes.s20),
