@@ -29,7 +29,6 @@ ThemeData getDarkApplicationTheme() {
     ),
 
     // Card view theme
-
     cardTheme: const CardTheme(
       color: ColorManager.white,
       shadowColor: ColorManager.lightGrey,
@@ -81,11 +80,8 @@ ThemeData getDarkApplicationTheme() {
     bottomSheetTheme: BottomSheetThemeData(
       backgroundColor: ColorManager.black,
       modalBarrierColor: ColorManager.darkBackground,
-      // Color for darker dragHandler (Maybe change this concpet later)
-      // surfaceTintColor: Colors.purple,
-      // Color of drag handler child (Maybe change this concpet later)
+      // Color of drag handler child
       modalBackgroundColor: ColorManager.white.withOpacity(0.63),
-      // surfaceTintColor: Colors.blue,
       shape: const RoundedRectangleBorder(
         // Adjust corner shape
         borderRadius: BorderRadius.vertical(

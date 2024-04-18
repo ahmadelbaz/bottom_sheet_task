@@ -30,12 +30,12 @@ ThemeData getLightApplicationTheme() {
     ),
 
     // Card view theme
-
     cardTheme: const CardTheme(
       color: ColorManager.white,
       shadowColor: ColorManager.lightGrey,
       elevation: AppSizes.s4,
     ),
+
     // App bar theme
     appBarTheme: AppBarTheme(
       backgroundColor: ColorManager.lightPrimary,
@@ -66,6 +66,7 @@ ThemeData getLightApplicationTheme() {
         shape: const LinearBorder(),
       ),
     ),
+
     // Text Button theme
     textButtonTheme: TextButtonThemeData(
       style: TextButton.styleFrom(
@@ -81,11 +82,8 @@ ThemeData getLightApplicationTheme() {
       backgroundColor: ColorManager.lightBottomSheet,
       modalBarrierColor: ColorManager.lightModal,
       constraints: const BoxConstraints(maxWidth: 375),
-      // Color for darker dragHandler (Maybe change this concpet later)
-      // surfaceTintColor: ColorManager.darkDraggerColor,
-      // Color of drag handler child (Maybe change this concpet later)
+      // Color of drag handler child
       modalBackgroundColor: ColorManager.black.withOpacity(0.63),
-      // surfaceTintColor: Colors.blue,
       shape: const RoundedRectangleBorder(
         // Adjust corner shape
         borderRadius: BorderRadius.vertical(
@@ -145,9 +143,6 @@ ThemeData getLightApplicationTheme() {
         fontSize: FontSize.s14,
         color: ColorManager.black,
       ),
-      // displayLarge: getBoldTextStyle(
-      //   fontSize: FontSize.s22,
-      // ),
       displayMedium: getMediumTextStyle(
         fontSize: FontSize.s12,
         color: ColorManager.lightPrimary,
