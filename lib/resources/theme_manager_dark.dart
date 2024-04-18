@@ -120,7 +120,7 @@ ThemeData getDarkApplicationTheme() {
         fontSize: FontSize.s18,
         color: ColorManager.lightPrimary,
       ),
-      // The tesxt inside column in the ticket bottom sheet
+      // The text inside column in the ticket bottom sheet
       bodyMedium: getBoldTextStyle(
         fontSize: FontSize.s18,
         color: ColorManager.white,
@@ -130,12 +130,12 @@ ThemeData getDarkApplicationTheme() {
         fontSize: FontSize.s15,
         color: ColorManager.grey4,
       ),
-      // Hotel Chekc-in text
+      // Hotel Check-in text
       titleLarge: getBoldTextStyle(
         fontSize: FontSize.s24,
         color: ColorManager.white,
       ),
-      // Ticket bootom part title
+      // Ticket bottom part title
       titleMedium: getRegularTextStyle(
         fontSize: FontSize.s15,
         color: ColorManager.white,
@@ -143,11 +143,11 @@ ThemeData getDarkApplicationTheme() {
       // Title Text in Location section
       titleSmall: getBoldTextStyle(
         fontSize: FontSize.s14,
-        color: ColorManager.darkGrey5,
+        color: ColorManager.darkGrey6,
       ),
       displayMedium: getRegularTextStyle(
         fontSize: FontSize.s14,
-        color: ColorManager.darkGrey5,
+        color: ColorManager.darkGrey6,
       ),
       displaySmall: getRegularTextStyle(
         fontSize: FontSize.s11,

@@ -36,7 +36,9 @@ class Ticket extends ConsumerWidget {
                             ),
                           ),
                           title: Text(
-                              "${userTicket!.ticketUserData!.firstName} ${userTicket!.ticketUserData!.lastName}"),
+                            "${userTicket!.ticketUserData!.firstName} ${userTicket!.ticketUserData!.lastName}",
+                            style: Theme.of(context).textTheme.bodyMedium,
+                          ),
                           subtitle: Text(
                             userTicket!.ticketSystemId.toString(),
                             style: Theme.of(context).textTheme.bodySmall,

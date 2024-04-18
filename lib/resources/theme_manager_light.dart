@@ -118,26 +118,32 @@ ThemeData getLightApplicationTheme() {
     textTheme: TextTheme(
       bodyLarge: getSemiBoldTextStyle(
         fontSize: FontSize.s18,
-        color: ColorManager.lightPrimary,
+        color: ColorManager.darkPrimary,
       ),
-      bodyMedium: getSemiBoldTextStyle(
-        fontSize: FontSize.s16,
-        color: ColorManager.darkGrey,
-      ),
-      bodySmall: getRegularTextStyle(
-        fontSize: FontSize.s14,
-        color: ColorManager.darkGrey,
-      ),
-      titleLarge: getBoldTextStyle(
+      // The text inside column in the ticket bottom sheet
+      bodyMedium: getBoldTextStyle(
         fontSize: FontSize.s18,
+        color: ColorManager.black,
       ),
+      // List tile subtitle
+      bodySmall: getRegularTextStyle(
+        fontSize: FontSize.s15,
+        color: ColorManager.darkGrey4,
+      ),
+      // Hotel Check-in text
+      titleLarge: getBoldTextStyle(
+        fontSize: FontSize.s24,
+        color: ColorManager.black,
+      ),
+      // Ticket bottom part title
       titleMedium: getRegularTextStyle(
-        fontSize: FontSize.s14,
-        color: ColorManager.grey2,
+        fontSize: FontSize.s15,
+        color: ColorManager.black,
       ),
-      titleSmall: getRegularTextStyle(
-        fontSize: FontSize.s12,
-        color: ColorManager.lightPrimary,
+      // Title Text in Location section
+      titleSmall: getBoldTextStyle(
+        fontSize: FontSize.s14,
+        color: ColorManager.black,
       ),
       // displayLarge: getBoldTextStyle(
       //   fontSize: FontSize.s22,

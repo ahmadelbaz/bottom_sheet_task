@@ -1,8 +1,10 @@
+import 'package:bottom_sheet_task_ahmad_elbaz/providers/all_providers.dart';
 import 'package:bottom_sheet_task_ahmad_elbaz/resources/color_manager.dart';
 import 'package:bottom_sheet_task_ahmad_elbaz/resources/value_manager.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-class CustomDivider extends StatelessWidget {
+class CustomDivider extends ConsumerWidget {
   const CustomDivider(
       {Key? key, this.height = 1, this.color = ColorManager.grey4})
       : super(key: key);
@@ -10,7 +12,7 @@ class CustomDivider extends StatelessWidget {
   final Color color;
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     return LayoutBuilder(
       builder: (BuildContext context, BoxConstraints constraints) {
         final boxWidth = constraints.constrainWidth();
@@ -25,7 +27,11 @@ class CustomDivider extends StatelessWidget {
               width: dashWidth,
               height: dashHeight,
               child: DecoratedBox(
-                decoration: BoxDecoration(color: color),
+                decoration: BoxDecoration(
+                  color: ref.watch(isLightStateProvider)
+                      ? ColorManager.darkGrey5
+                      : ColorManager.darkGrey4,
+                ),
               ),
             );
           }),
