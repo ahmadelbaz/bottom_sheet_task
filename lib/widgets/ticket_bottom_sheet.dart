@@ -57,6 +57,7 @@ class TicketBottomSheet extends ConsumerWidget {
               color: ref.watch(isLightStateProvider)
                   ? ColorManager.white
                   : ColorManager.darkGrey3.withOpacity(AppSizes.s0_8),
+              hasTrailing: true,
             ),
           ],
         ),
