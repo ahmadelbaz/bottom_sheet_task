@@ -33,11 +33,15 @@ class ReservationBottomSheet extends ConsumerWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 heightSpace(AppSizes.s30),
-                Image.network(
-                  reservationProvider.value![0].stays![0].stayImages![0]
-                      .toString(),
-                  alignment: Alignment.topCenter,
-                  width: double.infinity,
+                Container(
+                  constraints: const BoxConstraints(maxHeight: AppSizes.s300),
+                  child: Image.network(
+                    reservationProvider.value![0].stays![0].stayImages![0]
+                        .toString(),
+                    alignment: Alignment.topCenter,
+                    width: double.infinity,
+                    // height: 300,
+                  ),
                 ),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: AppSizes.s25),
