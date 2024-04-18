@@ -64,6 +64,7 @@ flutter:
   assets:
     - assets/icons/theme.png
     - assets/icons/star.png
+    - assets/icons/marker.png
     - assets/images/location.png
   #   - images/a_dot_ham.jpeg
 

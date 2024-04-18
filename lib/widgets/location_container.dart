@@ -54,8 +54,18 @@ class LocationContainer extends ConsumerWidget {
           ),
           const SizedBox(
             width: AppSizes.s100,
-            child: Image(
-              image: AssetImage(AppAssets.locationImage),
+            child: Stack(
+              children: [
+                Image(
+                  image: AssetImage(AppAssets.locationImage),
+                ),
+                Align(
+                  alignment: Alignment.center,
+                  child: Image(
+                    image: AssetImage(AppAssets.markerIcon),
+                  ),
+                ),
+              ],
             ),
           ),
         ],

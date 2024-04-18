@@ -101,8 +101,8 @@ ThemeData getDarkApplicationTheme() {
 
     // Bottom Sheet Theme
     bottomSheetTheme: const BottomSheetThemeData(
-      backgroundColor: ColorManager.darkBackground,
-      modalBarrierColor: ColorManager.darkBackground,
+      backgroundColor: ColorManager.black,
+      modalBarrierColor: ColorManager.black,
       dragHandleColor: ColorManager.darkGrey3,
       // Color for darker dragHandler (Maybe change this concpet later)
       surfaceTintColor: ColorManager.darkDraggerColor,

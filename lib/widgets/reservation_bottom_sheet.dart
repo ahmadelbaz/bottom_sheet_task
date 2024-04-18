@@ -139,13 +139,13 @@ class ReservationBottomSheet extends ConsumerWidget {
                       heightSpace(AppSizes.s40),
                       const Text('${AppStrings.location}:'),
                       LocationContainer(
-                          address:
-                              reservationProvider.value![0].stays![0].address!,
-                          hotelName: reservationProvider
-                              .value![0].stays![0].name
-                              .toString(),
-                          lat: reservationProvider.value![0].stays![0].lat!,
-                          long: reservationProvider.value![0].stays![0].lng!),
+                        address:
+                            reservationProvider.value![0].stays![0].address!,
+                        hotelName: reservationProvider.value![0].stays![0].name
+                            .toString(),
+                        lat: reservationProvider.value![0].stays![0].lat!,
+                        long: reservationProvider.value![0].stays![0].lng!,
+                      ),
                       heightSpace(AppSizes.s40),
                       const Text('${AppStrings.tickets}:'),
                       heightSpace(AppSizes.s12),
