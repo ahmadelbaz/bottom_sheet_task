@@ -5,8 +5,8 @@ import 'package:bottom_sheet_task_ahmad_elbaz/resources/value_manager.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-class ChangeThemeBar extends ConsumerWidget {
-  const ChangeThemeBar({super.key});
+class ThemeBar extends ConsumerWidget {
+  const ThemeBar({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {

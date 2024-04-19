@@ -2,7 +2,7 @@ import 'package:bottom_sheet_task_ahmad_elbaz/models/user_tickets.dart';
 import 'package:bottom_sheet_task_ahmad_elbaz/resources/common_functions.dart';
 import 'package:bottom_sheet_task_ahmad_elbaz/resources/string_manager.dart';
 import 'package:bottom_sheet_task_ahmad_elbaz/resources/value_manager.dart';
-import 'package:bottom_sheet_task_ahmad_elbaz/widgets/ticket_painter.dart';
+import 'package:bottom_sheet_task_ahmad_elbaz/widgets/reusable_widgets/ticket_painter.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 

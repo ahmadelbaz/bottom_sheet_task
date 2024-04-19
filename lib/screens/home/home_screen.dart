@@ -1,4 +1,4 @@
-import 'package:bottom_sheet_task_ahmad_elbaz/widgets/home_screen_body.dart';
+import 'package:bottom_sheet_task_ahmad_elbaz/screens/home/home_screen_body.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 

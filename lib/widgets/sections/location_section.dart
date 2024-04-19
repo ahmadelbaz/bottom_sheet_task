@@ -5,12 +5,12 @@ import 'package:bottom_sheet_task_ahmad_elbaz/resources/value_manager.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-class LocationContainer extends ConsumerWidget {
+class LocationSection extends ConsumerWidget {
   final String address;
   final String hotelName;
   final String lat;
   final String long;
-  const LocationContainer(
+  const LocationSection(
       {required this.address,
       required this.hotelName,
       required this.lat,

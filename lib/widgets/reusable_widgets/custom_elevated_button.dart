@@ -1,58 +1,55 @@
 import 'package:bottom_sheet/bottom_sheet.dart';
-import 'package:bottom_sheet_task_ahmad_elbaz/providers/all_providers.dart';
-import 'package:bottom_sheet_task_ahmad_elbaz/resources/color_manager.dart';
 import 'package:bottom_sheet_task_ahmad_elbaz/resources/font_manager.dart';
 import 'package:bottom_sheet_task_ahmad_elbaz/resources/text_style_manager.dart';
 import 'package:bottom_sheet_task_ahmad_elbaz/resources/value_manager.dart';
-import 'package:bottom_sheet_task_ahmad_elbaz/widgets/ticket_bottom_sheet.dart';
+import 'package:bottom_sheet_task_ahmad_elbaz/widgets/bottom_sheets/reservation_bottom_sheet.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-class CustomTextButton extends ConsumerWidget {
+class CustomElevatedButton extends ConsumerWidget {
   final String text;
-  final double borderWidth;
-  const CustomTextButton({this.text = '', this.borderWidth = 0.0, super.key});
+  const CustomElevatedButton({this.text = '', super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     return SizedBox(
       width: MediaQuery.of(context).size.width * AppSizes.s0_7,
       height: AppSizes.s50,
-      child: TextButton(
-        onPressed: () async {
+      child: ElevatedButton(
+        onPressed: () {
           showFlexibleBottomSheet(
             minHeight: 0,
-            initHeight: AppSizes.s0_5,
+            initHeight: AppSizes.s0_9,
             maxHeight: AppSizes.s1,
-            anchors: [0, AppSizes.s0_5, AppSizes.s1],
+            // Maybe change something here later
+            anchors: [
+              0,
+              AppSizes.s0_5,
+              AppSizes.s0_6,
+              AppSizes.s0_7,
+              AppSizes.s0_8,
+              AppSizes.s0_9,
+              AppSizes.s1,
+            ],
             bottomSheetBorderRadius:
                 const BorderRadius.vertical(top: Radius.circular(AppSizes.s20)),
             barrierColor: Theme.of(context).bottomSheetTheme.modalBarrierColor,
             context: context,
             builder: (BuildContext context, ScrollController scrollController,
                 double bottomSheetOffset) {
-              return TicketBottomSheet(
+              return ReservationBottomSheet(
                 scrollController: scrollController,
                 bottomSheetOffset: bottomSheetOffset,
               );
             },
           );
         },
-        style: TextButton.styleFrom(
+        style: ElevatedButton.styleFrom(
           textStyle: getBoldTextStyle(
             fontSize: FontSize.s16,
           ),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(0),
-            side: borderWidth == 0.0
-                ? BorderSide.none
-                : BorderSide(
-                    width: borderWidth,
-                    color: ref.watch(
-                            isLightStateProvider) // TODO : Not the best approach I guess , try to fix it later
-                        ? ColorManager.lightPrimary
-                        : ColorManager.darkPrimary,
-                  ),
           ),
         ),
         child: Text(text),

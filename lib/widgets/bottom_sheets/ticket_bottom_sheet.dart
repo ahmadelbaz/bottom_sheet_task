@@ -4,9 +4,9 @@ import 'package:bottom_sheet_task_ahmad_elbaz/resources/color_manager.dart';
 import 'package:bottom_sheet_task_ahmad_elbaz/resources/common_functions.dart';
 import 'package:bottom_sheet_task_ahmad_elbaz/resources/string_manager.dart';
 import 'package:bottom_sheet_task_ahmad_elbaz/resources/value_manager.dart';
-import 'package:bottom_sheet_task_ahmad_elbaz/widgets/b_s_head.dart';
-import 'package:bottom_sheet_task_ahmad_elbaz/widgets/custom_bottom_sheet.dart';
-import 'package:bottom_sheet_task_ahmad_elbaz/widgets/ticket.dart';
+import 'package:bottom_sheet_task_ahmad_elbaz/widgets/bottom_sheets/bottom_sheet_head.dart';
+import 'package:bottom_sheet_task_ahmad_elbaz/widgets/bottom_sheets/custom_bottom_sheet.dart';
+import 'package:bottom_sheet_task_ahmad_elbaz/widgets/reusable_widgets/ticket.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 

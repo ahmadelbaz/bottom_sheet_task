@@ -1,5 +1,5 @@
 import 'package:bottom_sheet_task_ahmad_elbaz/resources/string_manager.dart';
-import 'package:bottom_sheet_task_ahmad_elbaz/screens/home_screen.dart';
+import 'package:bottom_sheet_task_ahmad_elbaz/screens/home/home_screen.dart';
 import 'package:flutter/material.dart';
 
 class RoutesManager {

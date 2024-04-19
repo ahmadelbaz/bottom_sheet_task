@@ -1,7 +1,7 @@
 import 'package:bottom_sheet_task_ahmad_elbaz/providers/all_providers.dart';
 import 'package:bottom_sheet_task_ahmad_elbaz/resources/theme_manager_dark.dart';
 import 'package:bottom_sheet_task_ahmad_elbaz/resources/theme_manager_light.dart';
-import 'package:bottom_sheet_task_ahmad_elbaz/screens/home_screen.dart';
+import 'package:bottom_sheet_task_ahmad_elbaz/screens/home/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 

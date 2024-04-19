@@ -2,9 +2,9 @@ import 'package:bottom_sheet_task_ahmad_elbaz/providers/reservation_provider.dar
 import 'package:bottom_sheet_task_ahmad_elbaz/resources/common_functions.dart';
 import 'package:bottom_sheet_task_ahmad_elbaz/resources/string_manager.dart';
 import 'package:bottom_sheet_task_ahmad_elbaz/resources/value_manager.dart';
-import 'package:bottom_sheet_task_ahmad_elbaz/widgets/change_theme_bar.dart';
-import 'package:bottom_sheet_task_ahmad_elbaz/widgets/custom_elevated_button.dart';
-import 'package:bottom_sheet_task_ahmad_elbaz/widgets/custom_text_button.dart';
+import 'package:bottom_sheet_task_ahmad_elbaz/widgets/reusable_widgets/custom_elevated_button.dart';
+import 'package:bottom_sheet_task_ahmad_elbaz/widgets/reusable_widgets/custom_text_button.dart';
+import 'package:bottom_sheet_task_ahmad_elbaz/widgets/reusable_widgets/theme_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -21,7 +21,7 @@ class HomeScreenBody extends ConsumerWidget {
             child: Column(
               children: [
                 heightSpace(AppSizes.s50),
-                const ChangeThemeBar(),
+                const ThemeBar(),
                 const Spacer(),
                 const CustomElevatedButton(text: AppStrings.openReservation),
                 heightSpace(AppSizes.s20),

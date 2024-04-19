@@ -4,13 +4,13 @@ import 'package:bottom_sheet_task_ahmad_elbaz/resources/color_manager.dart';
 import 'package:bottom_sheet_task_ahmad_elbaz/resources/common_functions.dart';
 import 'package:bottom_sheet_task_ahmad_elbaz/resources/string_manager.dart';
 import 'package:bottom_sheet_task_ahmad_elbaz/resources/value_manager.dart';
-import 'package:bottom_sheet_task_ahmad_elbaz/widgets/b_s_head.dart';
-import 'package:bottom_sheet_task_ahmad_elbaz/widgets/custom_bottom_sheet.dart';
-import 'package:bottom_sheet_task_ahmad_elbaz/widgets/custom_divider.dart';
-import 'package:bottom_sheet_task_ahmad_elbaz/widgets/gallery_section.dart';
-import 'package:bottom_sheet_task_ahmad_elbaz/widgets/location_container.dart';
-import 'package:bottom_sheet_task_ahmad_elbaz/widgets/rooms_section.dart';
-import 'package:bottom_sheet_task_ahmad_elbaz/widgets/ticket.dart';
+import 'package:bottom_sheet_task_ahmad_elbaz/widgets/bottom_sheets/bottom_sheet_head.dart';
+import 'package:bottom_sheet_task_ahmad_elbaz/widgets/bottom_sheets/custom_bottom_sheet.dart';
+import 'package:bottom_sheet_task_ahmad_elbaz/widgets/reusable_widgets/custom_divider.dart';
+import 'package:bottom_sheet_task_ahmad_elbaz/widgets/reusable_widgets/ticket.dart';
+import 'package:bottom_sheet_task_ahmad_elbaz/widgets/sections/gallery_section.dart';
+import 'package:bottom_sheet_task_ahmad_elbaz/widgets/sections/location_section.dart';
+import 'package:bottom_sheet_task_ahmad_elbaz/widgets/sections/rooms_section.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -145,7 +145,7 @@ class ReservationBottomSheet extends ConsumerWidget {
                       ),
                       heightSpace(AppSizes.s40),
                       const Text('${AppStrings.location}:'),
-                      LocationContainer(
+                      LocationSection(
                         address:
                             reservationProvider.value![0].stays![0].address!,
                         hotelName: reservationProvider.value![0].stays![0].name
