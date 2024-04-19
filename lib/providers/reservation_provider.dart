@@ -6,8 +6,10 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class ReservationProvider extends AutoDisposeAsyncNotifier<List<Reservation>> {
   Future<List<Reservation>> _fetchReservations() async {
+    print('loading...');
     final reservationsData = await fetchReservations();
     if (reservationsData.keys.first != 'reservations') {
+      print('Failed');
       return [];
     } else if (reservationsData.keys.first == 'reservations') {
       final reservations = (reservationsData['reservations'] as List)
