@@ -81,9 +81,9 @@ ThemeData getLightApplicationTheme() {
     bottomSheetTheme: BottomSheetThemeData(
       backgroundColor: ColorManager.lightBottomSheet,
       modalBarrierColor: ColorManager.lightModal,
-      constraints: const BoxConstraints(maxWidth: 375),
+      constraints: const BoxConstraints(maxWidth: AppSizes.s375),
       // Color of drag handler child
-      modalBackgroundColor: ColorManager.black.withOpacity(0.63),
+      modalBackgroundColor: ColorManager.black.withOpacity(AppSizes.s0_63),
       shape: const RoundedRectangleBorder(
         // Adjust corner shape
         borderRadius: BorderRadius.vertical(

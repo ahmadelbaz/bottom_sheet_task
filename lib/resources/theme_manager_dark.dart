@@ -81,7 +81,7 @@ ThemeData getDarkApplicationTheme() {
       backgroundColor: ColorManager.black,
       modalBarrierColor: ColorManager.darkBackground,
       // Color of drag handler child
-      modalBackgroundColor: ColorManager.white.withOpacity(0.63),
+      modalBackgroundColor: ColorManager.white.withOpacity(AppSizes.s0_63),
       shape: const RoundedRectangleBorder(
         // Adjust corner shape
         borderRadius: BorderRadius.vertical(

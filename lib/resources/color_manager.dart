@@ -26,8 +26,7 @@ class ColorManager {
   static const Color lightBorder = Color(0xFF04132B);
   static const Color grey1 = Color(0xff938F93); // Light dragger Color
   static const Color grey2 = Color(0xffE9E9E9);
-  static const Color grey3 = Color(0xffEEEEEE);
-  static const Color grey4 = Color(0xff9A9A9A);
+  static const Color grey4 = Color(0xffEEEEEE);
 
   // General Colors
   static const Color white = Colors.white;

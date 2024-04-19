@@ -17,7 +17,7 @@ TextStyle _getTextStyle(
 // Bold Text Style
 
 TextStyle getBoldTextStyle(
-    {double fontSize = 12.0,
+    {double fontSize = FontSize.s12,
     Color color = ColorManager.black,
     String fontFamily = FontConstants.fontFamily}) {
   return _getTextStyle(
@@ -30,7 +30,7 @@ TextStyle getBoldTextStyle(
 // Semi Bold Text Style
 
 TextStyle getSemiBoldTextStyle(
-    {double fontSize = 12.0,
+    {double fontSize = FontSize.s12,
     Color color = ColorManager.black,
     String fontFamily = FontConstants.fontFamily}) {
   return _getTextStyle(
@@ -43,7 +43,7 @@ TextStyle getSemiBoldTextStyle(
 // Medium Text Style
 
 TextStyle getMediumTextStyle(
-    {double fontSize = 12.0,
+    {double fontSize = FontSize.s12,
     Color color = ColorManager.black,
     String fontFamily = FontConstants.fontFamily}) {
   return _getTextStyle(
@@ -56,7 +56,7 @@ TextStyle getMediumTextStyle(
 // Regular Text Style
 
 TextStyle getRegularTextStyle(
-    {double fontSize = 12.0,
+    {double fontSize = FontSize.s12,
     Color color = ColorManager.black,
     String fontFamily = FontConstants.fontFamily}) {
   return _getTextStyle(
@@ -69,7 +69,7 @@ TextStyle getRegularTextStyle(
 // Light Text Style
 
 TextStyle getLightTextStyle(
-    {double fontSize = 12.0,
+    {double fontSize = FontSize.s12,
     Color color = ColorManager.black,
     String fontFamily = FontConstants.fontFamily}) {
   return _getTextStyle(
