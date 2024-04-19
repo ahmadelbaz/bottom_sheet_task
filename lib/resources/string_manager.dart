@@ -25,6 +25,8 @@ class AppStrings {
   static const String roomNumber = "Room Number";
   static const String sleeps = "Sleeps";
   static const String address = "Address";
+  static const String errorSomethingWentWrong = "Error: Something went wrong.";
+  static const String tryAgain = "Try Again";
 }
 
 class AppAssets {
