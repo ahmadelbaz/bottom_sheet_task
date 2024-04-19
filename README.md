@@ -1,16 +1,96 @@
-# bottom_sheet_task_ahmad_elbaz
+# Bottom Sheet UI
 
-A new Flutter project.
+UI Design for a bottom sheet in flutter 
 
-## Getting Started
+## How to Use
 
-This project is a starting point for a Flutter application.
+You can try the app with both Androi & Windows Versions :
+- Android : [Click to download apk file](https://www.dropbox.com/scl/fi/7ui5sdrar842poupshz54/bottom_sheet_ahmad_elbaz.apk?rlkey=rw24ci0gh5x41xx0mpggdpaze&st=plce7kup&dl=1)
+- Windows : [Click to download exe file](https://www.dropbox.com/scl/fi/tfxgqbcupqzqfpa2xsy30/bottom_sheet_task_install.exe?rlkey=a6v7p1k7mout96ci7hlotc8hm&st=lpkk2pix&dl=1)
 
-A few resources to get you started if this is your first Flutter project:
+To get and run the code :
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+**Step 1:**
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Download or clone this repo by using the link below:
+
+```
+https://github.com/ahmadelbaz/bottom_sheet_task.git
+```
+
+**Step 2:**
+
+Go to project root and execute the following command in console to get the required dependencies: 
+
+```
+flutter pub get 
+```
+**Step 3:**
+
+You have to add "baseUrl" and the access "token" in the file:
+
+```
+lib/
+|- resources/
+  |- string_manager.dart
+```
+
+## Screenshots
+<img src="https://private-user-images.githubusercontent.com/31745846/323897554-80921c50-8e54-4499-a107-4728cec92128.jpg?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MTM1Mjc0OTQsIm5iZiI6MTcxMzUyNzE5NCwicGF0aCI6Ii8zMTc0NTg0Ni8zMjM4OTc1NTQtODA5MjFjNTAtOGU1NC00NDk5LWExMDctNDcyOGNlYzkyMTI4LmpwZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDA0MTklMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwNDE5VDExNDYzNFomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTg0MWMyZDZjNTM2NTdmYzdhNDRiYWY2OWRjYzcyNGU3M2Q4ODgyYjg1NWFjMjNjNDgwYTNhMjFjNGFiZDdmYjUmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.6BTplvywG6UrK7vNBXlPmW3sfmNveWBvh9l-Jzz6Uec" width="300"> | <img src="https://private-user-images.githubusercontent.com/31745846/323897603-d8efb6da-3b6e-4ce4-aa15-0fe00065a0f7.jpg?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MTM1Mjc0OTQsIm5iZiI6MTcxMzUyNzE5NCwicGF0aCI6Ii8zMTc0NTg0Ni8zMjM4OTc2MDMtZDhlZmI2ZGEtM2I2ZS00Y2U0LWFhMTUtMGZlMDAwNjVhMGY3LmpwZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDA0MTklMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwNDE5VDExNDYzNFomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWRiZDE2N2M3MWQ3NzFjNzkxODllNjJmMTc1NTVjNzQzYjkwY2YwN2EzMmM1ZWM5NDdmYWM1ZjJiMGYwZWFmMzQmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.4UBOOwq0fgznnWk2tthBQcZ3vmaeRPvaMTISxbI894g" width="300">  | <img src="https://private-user-images.githubusercontent.com/31745846/323897652-20a76834-6005-4d96-a2c9-946938110be9.jpg?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MTM1Mjc0OTQsIm5iZiI6MTcxMzUyNzE5NCwicGF0aCI6Ii8zMTc0NTg0Ni8zMjM4OTc2NTItMjBhNzY4MzQtNjAwNS00ZDk2LWEyYzktOTQ2OTM4MTEwYmU5LmpwZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDA0MTklMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwNDE5VDExNDYzNFomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTJjMjU4NTVmYjQwOTZkOGZkNTg0MDk0NjJhMjcxZmM4YjY2NjIzNTNmZGIyZGNiZTE3MDQ2YmFkNDU0ZjM5ZGYmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.rZ5d1sBDj5PES8vpa2-ljZ4hZ4ccEh9kuNBfd-EKH1M" width="300">  | <img src="https://private-user-images.githubusercontent.com/31745846/323897682-694d5ef2-79f7-400b-84a0-d120ad4b1675.jpg?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MTM1Mjc0OTQsIm5iZiI6MTcxMzUyNzE5NCwicGF0aCI6Ii8zMTc0NTg0Ni8zMjM4OTc2ODItNjk0ZDVlZjItNzlmNy00MDBiLTg0YTAtZDEyMGFkNGIxNjc1LmpwZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDA0MTklMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwNDE5VDExNDYzNFomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTBjOTY3MmVkNmJhNWExYjc0MGMyOWVmZjkxYjkzY2NjYTM3ZjVlYmY3OWVjZmNlOGY1NDQwNWZlZWU4NjJmN2ImWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.BGVY7SJ4ZQUyh9zwGlH41hg4wiDtMSYOxMV2lg1Lcs4" width="300">  | <img src="https://private-user-images.githubusercontent.com/31745846/323897690-01893701-1725-4858-b24c-69463ba38fc8.jpg?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MTM1Mjc0OTQsIm5iZiI6MTcxMzUyNzE5NCwicGF0aCI6Ii8zMTc0NTg0Ni8zMjM4OTc2OTAtMDE4OTM3MDEtMTcyNS00ODU4LWIyNGMtNjk0NjNiYTM4ZmM4LmpwZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDA0MTklMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwNDE5VDExNDYzNFomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWQ0YTY2Yjg2ZjViNzU1YTBkNGE4M2IwODU4Yzk4MGI2ZmUzOTliZTdiYTM1NGRlMDk1ZjIzMWNlODg5NzM4ZjUmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.bPoSEpLCfB2Dn5R6XHnCIMyQVCOhnKACYCkKI2IzZng" width="300">  | <img src="https://private-user-images.githubusercontent.com/31745846/323897698-246cbb20-4d6a-4984-a223-acdb30fba23e.jpg?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MTM1Mjc0OTQsIm5iZiI6MTcxMzUyNzE5NCwicGF0aCI6Ii8zMTc0NTg0Ni8zMjM4OTc2OTgtMjQ2Y2JiMjAtNGQ2YS00OTg0LWEyMjMtYWNkYjMwZmJhMjNlLmpwZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDA0MTklMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwNDE5VDExNDYzNFomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWM3NzExNzI2NDJlNzM0Y2Q1MmYyNWQ0MmM1MmRiMjllZGVlODcyNTNjZDg0NjE0ZWE1YzdiMWJlYzlhMDE1YTgmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.NLBogOc6IWjGqvIqrPqDjkLogrzRKP9LOhdsM5NCzuI" width="300">  | <img src="https://private-user-images.githubusercontent.com/31745846/323897706-30f2f669-04db-4925-ab04-1134432c93a7.jpg?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MTM1Mjc0OTQsIm5iZiI6MTcxMzUyNzE5NCwicGF0aCI6Ii8zMTc0NTg0Ni8zMjM4OTc3MDYtMzBmMmY2NjktMDRkYi00OTI1LWFiMDQtMTEzNDQzMmM5M2E3LmpwZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDA0MTklMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwNDE5VDExNDYzNFomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTI0MTU0NjM1MmQ5MmY0ZGZkMWUwYzM2ZDZmYTQ4MDNiMWQyNmQ0OWUwM2MyODNiYmM0ZDgwMTdmY2RkNjNkMmImWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.2wOo6dwpFEk227TooE9h4hoIm_iKq236LwzXFDxn3P0" width="300">  | <img src="https://private-user-images.githubusercontent.com/31745846/323949352-aea9a461-a1d0-4cec-bd2b-563bffbb586c.jpg?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MTM1Mjg2NjAsIm5iZiI6MTcxMzUyODM2MCwicGF0aCI6Ii8zMTc0NTg0Ni8zMjM5NDkzNTItYWVhOWE0NjEtYTFkMC00Y2VjLWJkMmItNTYzYmZmYmI1ODZjLmpwZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDA0MTklMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwNDE5VDEyMDYwMFomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTMzY2ZjMDRjYmMwODhhMTM1MmRiZGIxYmU3OWFmMjUzOTQ0N2UwNDQyNjYyNTU0ZTM1ZWVkNmRhYmNkZmI1Y2QmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.F1CQhK7E4ngvOgBslI2TUiJox-prLz8Bdxx72oTBwVI" width="300">  | <img src="https://private-user-images.githubusercontent.com/31745846/323949345-ef8b6e5f-9982-4cf3-9b66-94a5c2653933.jpg?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MTM1Mjg2NjAsIm5iZiI6MTcxMzUyODM2MCwicGF0aCI6Ii8zMTc0NTg0Ni8zMjM5NDkzNDUtZWY4YjZlNWYtOTk4Mi00Y2YzLTliNjYtOTRhNWMyNjUzOTMzLmpwZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDA0MTklMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwNDE5VDEyMDYwMFomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWE3NjNjMDcwZTZhZjk3ODFkM2M4YTdlODBkZmQ1MDc2ZjVjY2U2NzQ5NDk2YzlhZTc4YTUzNjBmNDdjMjIyNjcmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.CNMQ4A2rJGdJWNR7sgTBZXZfwG-6aibUCKQAnNDSjbM" width="300">
+
+## Features
+
+* Dark/Light themes
+* Bottom Sheet
+* Reusable widgets
+* State management with flutter_riverpod
+* Fetching data from api using Dio
+* Secure sensitive data using env file
+
+### Up-Coming Features:
+
+* Redraw Switch widget.
+* Add Extension for customizing different colors for different themes.
+* Add shimmer effect for images.
+* Store user preferred theme in local storage.
+* Apply tests and CI/CD.
+
+### Libraries & Tools Used
+
+* dio
+* flutter_riverpod
+* envied
+* bottom_sheet
+
+### Folder Structure
+
+Here is the folder structure we have been using in this project
+
+```
+lib/
+|- APIs/
+|- app/
+|- models/
+|- providers/
+|- resources/
+|- screens/
+|- services/
+|- widgets/
+|- env.dart
+|- main.dart
+```
+
+Now, lets dive into the lib folder which has the main code for the application.
+
+```
+1- APIs - All APIs we use in the project.
+2- app - Contains the app.dart file that contains the MaterialApp and the first class in our app, We implement Singletone design pattern in this file.
+3- models - All models we need in the project.
+4- providers — Contains providers for state-management of our application, to connect the reactive data of our application with the UI.
+5- resources — All the application level constants are defined in this directory with-in their respective files. This directory contains the constants for `theme`, `dimentions`, `colors`, 'routes , `api endpoints` and `strings`.
+6- screens - All screens we have in our app.
+7- services - Contains any service we need in our app. For example Dio, SharedPreferences etc.
+8- widgets — Contains the common widgets for your applications. For example, Button, TextField, BottomSheet etc.
+9- env.dart — This file contains any environment variables we are trying to secure like api endpoint, token etc.
+10- main.dart - This is the starting point of the application.
+```
