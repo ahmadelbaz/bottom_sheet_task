@@ -37,6 +37,6 @@ class AppAssets {
 }
 
 class AppNetwork {
-  static String baseUrl = Env.apiKey;
-  static String token = Env.token;
+  static String baseUrl = Env.apiKey; // ADD YOU API HERE
+  static String token = Env.token; // ADD YOUR TOKEN HERE
 }
